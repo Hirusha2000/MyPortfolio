@@ -1,184 +1,88 @@
 <!DOCTYPE html>
-<!--Hirusha_Geegange-->
+<!--Hirusha Geeganage-->
 <!--GDSE_62-->
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Case_Four</title>
-
-  <link rel="stylesheet" href="/assets/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="../../../assets/fontawesome/css/all.min.css">
-
+  <title>CSS Assignment Four</title>
+  <link rel="stylesheet" href="assests/CSS/normalize.css">
   <style>
-
-    body {
-      margin: 0;
-      overflow: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    body::-webkit-scrollbar {
-      display: none;
-    }
-
-    body>section>div>h2{
-      font-family: "Segoe UI";
-      font-size: 30px;
-
-    }
-
-    body>section>div>h1{
-      font-family: Aharoni;
-      font-size: 150px;
-    }
-
-    section > div:nth-child(1) {
+    body > section {
       position: relative;
-      background-color: red;
-      color: white;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      padding-left: 10px;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    section > div:nth-child(2) {
-      position: relative;
-      background-color: white;
-      color: black;
       height: 100vh;
-      width: 100vw;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      max-width: 100%;
     }
-
-    section:nth-child(2) > div:nth-child(1) {
-      position: relative;
-      background-color: blue;
+    body > section > div {
+      position: sticky;
+      height: 50px;
+      top: 0;
+      z-index: 1;
+    }
+    body > section > div > h1 {
+      margin: auto;
+      padding: 10px 10px 10px 25px;
       color: white;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      padding-left: 10px;
-      margin-top: 0;
-      margin-bottom: 0;
+      font-family: 'Cambria', serif;
     }
-
-    section:nth-child(2) > div:nth-child(2) {
+    body > section > h1 {
       position: relative;
-      background-color: deepskyblue;
-      color: black;
-      height: 100vh;
-      width: 100vw;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin-top: 40vh;
       text-align: center;
-      max-width: 100%;
+      font-size: 120px;
     }
-
-    section:nth-child(3) > div:nth-child(1) {
-      position: relative;
-      background-color: gray;
-      color: white;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      padding-left: 10px;
-      margin-top: 0;
-      margin-bottom: 0;
+    body > section:nth-child(1) {
+      background: #FFFFFF;
     }
-
-    section:nth-child(3) > div:nth-child(2) {
-      position: relative;
-      background-color: darkgray;
-      color: black;
-      height: 100vh;
-      width: 100vw;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      max-width: 100%;
+    body > section:nth-child(1)>div {
+      background: #ff0000;
     }
-
-    section:nth-child(4) > div:nth-child(1) {
-      position: relative;
-      background-color: darkred;
-      color: white;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      padding-left: 10px;
-      margin-top: 0;
-      margin-bottom: 0;
+    body > section:nth-child(2) {
+      background: #5691e7;
     }
-
-    section:nth-child(4) > div:nth-child(2) {
-      position: relative;
-      background-color: red;
-      color: black;
-      height: 100vh;
-      width: 100vw;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      max-width: 100%;
+    body > section:nth-child(2)>div {
+      background: #002065;
+    }
+    body > section:nth-child(3) {
+      background: #545151;
+    }
+    body > section:nth-child(3)>div {
+      background: #1a1a1a;
+    }
+    body > section:nth-child(4) {
+      background: #e73c3c;
+    }
+    body > section:nth-child(4)>div {
+      background: #600101;
     }
   </style>
-
 </head>
 <body>
-
 <section>
   <div>
-    <h2>Card 1</h2>
+    <h1>Card 1</h1>
   </div>
-  <div>
-    <h1>Hello</h1>
-  </div>
+  <h1>Hello</h1>
 </section>
 
 <section>
   <div>
-    <h2>Card 2</h2>
+    <h1>Card 2</h1>
   </div>
-  <div>
-    <h1>How</h1>
-  </div>
+  <h1>How</h1>
 </section>
 
 <section>
   <div>
-    <h2>Card 3</h2>
+    <h1>Card 3</h1>
   </div>
-  <div>
-    <h1>Are</h1>
-  </div>
+  <h1>Are</h1>
 </section>
 
 <section>
   <div>
-    <h2>Card 3</h2>
+    <h1>Card 4</h1>
   </div>
-  <div>
-    <h1>You..?</h1>
-  </div>
+  <h1>You..?</h1>
 </section>
 
 </body>
