@@ -1,8 +1,12 @@
 *{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
+/*__+++++++++++++++++++++++header+++++++++++++++++++++++__*/
 
 /* Header styles */
 header {
@@ -63,7 +67,7 @@ nav a {
 }
 
 nav a::after {
-    font-weight: bold;
+    font-weight: bolder;
     content: "";
     position: absolute;
     bottom: 0;
@@ -76,7 +80,7 @@ nav a::after {
 }
 
 nav a:hover {
-    /*font-weight: bolder;*/
+    font-weight: bolder;
     color: #6c6c00;
     transform: scale(1.2);
 }
@@ -102,6 +106,7 @@ nav a:hover::after {
     }
 }
 
+/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 
 /*__+++++++++++++++++++++++forum+++++++++++++++++++++++__*/
 
@@ -157,3 +162,145 @@ input:focus, textarea:focus {
 }
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 
+/*__++++++++++++++++++++++My name & photo++++++++++++++++++++++__*/
+
+
+main>section:nth-child(1){
+
+    background-color: gray;
+}
+.about {
+ padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* padding: 50px 0;*/
+    background-color: #f9f9f9;
+}
+
+
+.about-image {
+background-color: white;
+
+    padding-top: 30px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 35%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1);
+}
+
+.about-info {
+
+    margin-left: 50px;
+    text-align: center;
+}
+
+.about-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    color: #333;
+    text-shadow: 2px 2px 0 rgba(144, 137, 39, 0.8);
+    margin-bottom: 20px;
+}
+
+.about-description {
+
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #534811;
+}
+
+/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
+/*__+++++++++++++++++++++About Me++++++++++++++++++++++__*/
+
+/* Style the heading */
+
+/*
+main>section:nth-child(2)>div:nth-child(1)>div{
+    position: relative;
+}
+*/
+
+main>section:nth-child(2)>div:nth-child(1)>div:nth-child(3){
+
+  /*  border: 1px solid red;*/
+    padding-top: 450px;
+    top: 10px;
+    height: 200px;
+    width: 200px;
+   padding-left: 500px;
+    position: absolute;
+    transform: scale(2.5);
+    opacity: 50%;
+}
+.about-me-heading {
+
+   /* top: 100px;
+    position: sticky;*/
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #28282B;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 20px;
+   padding-left: 60px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: left
+
+}
+
+/* Style the message */
+.about-me-message {
+
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    padding-left: 60px;
+    font-size: 24px;
+
+    margin-bottom: 40px;
+}
+
+/* Style the description */
+.about-me-description {
+    padding-top: 0px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Style the button */
+.about-me-button {
+    display: inline-block;
+    background-color: #acaf4c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+/* Change the button color on hover */
+.about-me-button:hover {
+    background-color: #8e833e;
+}
+
+/* Center the button */
+.about-me-button-container {
+    text-align: center;
+}
