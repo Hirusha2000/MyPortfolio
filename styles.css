@@ -225,25 +225,33 @@ background-color: white;
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__+++++++++++++++++++++About Me++++++++++++++++++++++__*/
 
-/* Style the heading */
 
-/*
-main>section:nth-child(2)>div:nth-child(1)>div{
-    position: relative;
-}
-*/
+/*.blob1 {
 
-main>section:nth-child(2)>div:nth-child(1)>div:nth-child(3){
-
-  /*  border: 1px solid red;*/
+    !*  border: 1px solid red;*!
     padding-top: 450px;
     top: 10px;
     height: 200px;
     width: 200px;
-   padding-left: 500px;
-    position: absolute;
+    padding-left: 500px;
+    position: sticky;
     transform: scale(2.5);
     opacity: 50%;
+
+}*/
+
+main>section:nth-child(2)>div:nth-child(1)>p:nth-child(3){
+    padding-right: -100px;
+   /* padding-left: 300px;*/
+}
+
+about-me-container{
+    position: relative;
+}
+main>section:nth-child(2){
+    background-color:gray;
+height: 800px;
+
 }
 .about-me-heading {
 
@@ -256,7 +264,7 @@ main>section:nth-child(2)>div:nth-child(1)>div:nth-child(3){
     font-size: 36px;
     font-weight: bold;
     padding-top: 20px;
-   padding-left: 60px;
+   padding-left: 70px;
     padding-bottom: 20px;
     margin-bottom: 40px;
     text-align: left
@@ -265,10 +273,10 @@ main>section:nth-child(2)>div:nth-child(1)>div:nth-child(3){
 
 /* Style the message */
 .about-me-message {
-
+    background-color: #bbb774;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
-    padding-left: 60px;
+    padding-left: 90px;
     font-size: 24px;
 
     margin-bottom: 40px;
@@ -276,31 +284,268 @@ main>section:nth-child(2)>div:nth-child(1)>div:nth-child(3){
 
 /* Style the description */
 .about-me-description {
-    padding-top: 0px;
-    font-size: 18px;
-    text-align: center;
+
+
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+    position: relative;
+   background-color: gray;
+   /* font-family: 'Montserrat', sans-serif;*/
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+  /*  margin-left: ;*/
+  /*  border: 1px solid yellow;*/
+   /* height: 200px;
+    width: 900px;*/
+    /*padding-top: 0px;*/
+    font-size: 20px;
+    text-align: left;
     margin-bottom: 40px;
 }
 
 /* Style the button */
 .about-me-button {
-    display: inline-block;
-    background-color: #acaf4c;
-    color: white;
-    padding: 12px 20px;
+   position: relative;
+    padding: 15px;
+  /*  padding-top: 10px;
+     padding-bottom: 10px;*/
+    /*list-style: none;*/
+    /*display: inline-block;*/
+    background-color: #bbb774;
+    color: #1c1c0b;
+  /*  padding: 12px 20px;*/
     border: none;
     border-radius: 4px;
     font-size: 18px;
     cursor: pointer;
-
+ margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* border: 2px solid red;*/
+    margin-right: 40px;
+   width: 100px;
+    left: 100px;
 }
+
+
 
 /* Change the button color on hover */
 .about-me-button:hover {
-    background-color: #8e833e;
+    background-color: #c2ab5d;
 }
 
 /* Center the button */
-.about-me-button-container {
+/*.about-me-button-container {
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+margin-bottom: 50px;
+!* padding-left: 400px;*!
+    position: relative;
+    width: 30px;
+    height: 20px;
+
+}*/
+.cyber{
+
+    padding-top: 20px;
+    padding-left: 100px;
+   /* background-color: #8e833e;*/
+}
+.cyber-para{
+
+   /* border: 2px solid red;*/
+    padding-left: 100px;
+    /*padding-bottom: 40px;*/
+}
+
+.cyber-logo{
+
+    position: relative;
+    top: 0;
+    right: 0;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    /*border-radius: 10%;*/
+}
+
+
+/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
+/*__++++++++++++++++++++++++Services+++++++++++++++++++__*/
+
+
+
+.img_gray {
+    margin-top: 10px;
+    filter: grayscale(1);
+}
+
+.img_gray:hover {
+    transform: scale(1.5);
+    filter: none;
+}
+
+.service-heading{
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #28282B;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+    text-align: left
+}
+
+.service-1{
+
+}
+
+/* For desktop screens */
+.service-logins {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-login {
+
+    margin: 0 1rem;
+    padding: 1rem;
+    border: 10px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.service-login:hover {
+    border-color: #414218;
+}
+
+.service-login img {
+
+    transform: scale(1.3);
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+    max-width: 5rem;
+    margin-bottom: 1rem;
+
+}
+
+.service-login h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-login p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .service-logins {
+        flex-wrap: wrap;
+    }
+
+    .service-login {
+        margin: 1rem 0;
+        width: 100%;
+    }
+}
+
+.service-section{
+
+    padding-bottom: 200px;
+    background-color: gray;
+}
+
+.sec-box{
+
+   /* width: 100vw;*/
+    height: 50px;
+    background-color: #c2ab5d;
+
+    margin-top: 100px;
+}
+
+.sec-box>p{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
     text-align: center;
 }
+.service-description{
+
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+}
+
+/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
+/*__++++++++++++++++++++++++projects+++++++++++++++++++__*/
+
+
+
+.projects{
+    background-color: gray;
+    height: 1400px;
+}
+.project-heading{
+
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #28282B;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+    text-align: left
+
+}
+
+/* Set up the basic box model styles for each photo */
+.project-photo {
+    width: 300px;
+    height: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 2px solid #333;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add a hover effect to scale the photo slightly */
+.project-photo:hover {
+    transform: scale(1.3);
+}
+
+/* Style the image inside the photo box */
+.project-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Create a grid layout for the photos */
+.project-grid {
+
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.3rem;
+    margin: 1.3rem auto;
+}
+
+
+/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
+/*__+++++++++++++++++++++++++Gallery+++++++++++++++++++__*/
