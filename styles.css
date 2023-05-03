@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   /* padding: 20px;*/
+    /* padding: 20px;*/
     padding-top: 10px;
       padding-bottom: 10px;
     background-color: #28282B;
@@ -167,7 +167,9 @@ input:focus, textarea:focus {
 
 main>section:nth-child(1){
 
-    background-color: gray;
+    background-color: #343541;
+    /*343541*/
+    /*444654*/
 }
 .about {
  padding: 100px;
@@ -209,8 +211,8 @@ background-color: white;
 
 .about-name {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5rem;
-    color: #333;
+    font-size: 4rem;
+    color: #c6b3b3;
     text-shadow: 2px 2px 0 rgba(144, 137, 39, 0.8);
     margin-bottom: 20px;
 }
