@@ -8,34 +8,45 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
 
     <style>
-        section{
-            height: 300px;
-            width: 500px;
+        section {
+            position: relative;
+            width: 250px;
+            height: 400px;
+            left: -200px;
+            top: 50px;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            position: relative;
-            top: 150px;
-            right: 110px;
-
+            justify-content: space-evenly;
         }
 
-        section>div{
-            color: #cccccc;
+        section > div {
             position: relative;
-            margin: 20px;
-            height: 90px;
-            width: 120px;
+            color: white;
+            font-size: 20px;
+            height: 50px;
+            left: 0px;
             background-color: purple;
-            left: 0;
+
+            transition: all 4s;
         }
 
-        section>div:hover{
-            left: 150px;
-           transition: all 5s;
-
+        section > div:hover {
+            left: 200px;
+            transition: all 4s;
+            background-color: purple;
         }
 
+        section > div > i {
+            position: absolute;
+            top: 15px;
+            bottom: 0;
+            right: 15px;
+            margin: auto;
+        }
+
+        section > div > p {
+            margin-left: 40px;
+        }
 
 
     </style>
@@ -43,11 +54,21 @@
 <body>
 
 <section>
-    <div class="a"> Menu One   <i class="fa-solid fa-car" ></i></div>
-    <div class="b"> Menu Two   <i class="fa-solid fa-bicycle"></i></div>
-    <div class="c"> Menu Three <i class="fa-solid fa-ship"></i></div>
-    <div class="d"> Menu Four  <i class="fa-solid fa-plane"></i></div>
-    <div class="e"> Menu Five  <i class="fa-solid fa-rocket"></i></div>
+
+
+
+    <div><p>Menu One</p><i class="fa-solid fa-car" style="color: #ffffff;"></i></div>
+    <div><p>Menu Two</p><i class="fa-solid fa-bicycle" style="color: #ffffff;"></i></div>
+    <div><p>Menu Three</p><i class="fa-solid fa-ship" style="color: #ffffff;"></i></div>
+    <div><p>Menu Four</p><i class="fa-solid fa-plane" style="color: #ffffff;"></i></div>
+    <div><p>Menu Five</p><i class="fa-solid fa-rocket" style="color: #ffffff;"></i></div>
+
+
+
+
 </section>
 </body>
 </html>
+
+
+
