@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Hirusha Geeganage-->
+<!--GDSE_62-->
+<head>
+  <meta charset="UTF-8">
+  <title>Animations Assignment Three</title>
+  <link rel="stylesheet" href="assests/css/normalize.css">
+  <style>
+    section{
+      position: absolute;
+      background-color: blue;
+      border-radius: 20px;
+      left: 0;
+      top: 0;
+      width: 160px;
+      height: 80px;
+      animation-name: animation;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-delay: 1s;
+    }
+
+    @keyframes animation {
+      0% {
+        top: 0;
+        left: 0;
+        background-color: blue;
+      }
+      25% {
+        top: 0;
+        left: 1110px;
+        background-color: yellow;
+        transform: rotate(180deg);
+      }
+      50% {
+        top: 450px;
+        left: 1110px;
+        background-color: red;
+        transform: rotate(360deg);
+      }
+      75% {
+        top: 450px;
+        left: 0;
+        background-color: deeppink;
+        transform: rotate(180deg);
+      }
+      100% {
+        top: 0;
+        left: 0;
+        background-color: orangered;
+      }
+    }
+  </style>
+</head>
+<body>
+<section></section>
+</body>
+</html>
