@@ -6,6 +6,32 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*
+body >main> section:nth-child(1) {
+    position: relative;
+    height: 100vh;
+}
+
+body >main> section > div > div :nth-child(1) {
+    position: sticky;
+    height: 50px;
+    top: 0;
+    z-index: 1;
+}
+
+body > main> section > div >div:nth-child(1)>h2 {
+    margin: auto;
+    padding: 10px 10px 10px 25px;
+    color: white;
+    font-family: 'Cambria', serif;
+}
+
+body >main> section > div :nth-child(1) {
+    position: relative;
+    margin-top: 40vh;
+    text-align: center;
+   !* font-size: 120px;*!
+}*/
 /*__+++++++++++++++++++++++header+++++++++++++++++++++++__*/
 
 /* Header styles */
@@ -16,10 +42,11 @@ header {
     /* padding: 20px;*/
     padding-top: 10px;
       padding-bottom: 10px;
-    background-color: #28282B;
+    background-color: #202123;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
 }
 
 #signature{
@@ -30,7 +57,7 @@ header {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     position: relative;
-    left: 40px;
+    left: 68px;
 }
 
 
@@ -111,7 +138,7 @@ nav a:hover::after {
 /*__+++++++++++++++++++++++forum+++++++++++++++++++++++__*/
 
 body {
-    background-color: #f2f2f2;
+    background-color: #444654;
     font-family: Arial, sans-serif;
 }
 form {
@@ -172,7 +199,10 @@ main>section:nth-child(1){
     /*444654*/
 }
 .about {
- padding: 100px;
+
+    padding-top: 160px;
+padding-bottom:100px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,8 +242,8 @@ background-color: white;
 .about-name {
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
-    color: #c6b3b3;
-    text-shadow: 2px 2px 0 rgba(144, 137, 39, 0.8);
+    color: #cba546;
+    text-shadow: 2px 2px 0 rgba(52, 46, 25, 0.8);
     margin-bottom: 20px;
 }
 
@@ -221,7 +251,7 @@ background-color: white;
 
     font-size: 1.6rem;
     line-height: 1.5;
-    color: #534811;
+    color: #72716d;
 }
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
@@ -248,10 +278,10 @@ main>section:nth-child(2)>div:nth-child(1)>p:nth-child(3){
 }
 
 about-me-container{
-    position: relative;
+    position: sticky;
 }
 main>section:nth-child(2){
-    background-color:gray;
+    background-color: #444654;
 height: 800px;
 
 }
@@ -260,14 +290,17 @@ height: 800px;
    /* top: 100px;
     position: sticky;*/
 
+
     font-family: 'Montserrat', sans-serif;
+    /*mso-border-shadow: yes;*/
+
     color: white;
-    background-color: #28282B;
-    font-size: 36px;
+    background-color: #202123;
+    font-size: 24px;
     font-weight: bold;
-    padding-top: 20px;
-   padding-left: 70px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 70px;
+    padding-bottom: 15px;
     margin-bottom: 40px;
     text-align: left
 
@@ -393,7 +426,7 @@ margin-bottom: 50px;
 
     font-family: 'Montserrat', sans-serif;
     color: white;
-    background-color: #28282B;
+    background-color: #202123;
     font-size: 36px;
     font-weight: bold;
     padding-top: 20px;
@@ -423,7 +456,7 @@ margin-bottom: 50px;
 }
 
 .service-login:hover {
-    border-color: #414218;
+    border-color: #cba546;
 }
 
 .service-login img {
@@ -462,7 +495,7 @@ margin-bottom: 50px;
 .service-section{
 
     padding-bottom: 200px;
-    background-color: gray;
+    background-color: #444654;
 }
 
 .sec-box{
@@ -493,7 +526,7 @@ margin-bottom: 50px;
 
 
 .projects{
-    background-color: gray;
+    background-color: #444654;
     height: 1400px;
 }
 .project-heading{
@@ -501,7 +534,7 @@ margin-bottom: 50px;
 
     font-family: 'Montserrat', sans-serif;
     color: white;
-    background-color: #28282B;
+    background-color: #202123;
     font-size: 36px;
     font-weight: bold;
     padding-top: 20px;
@@ -519,7 +552,7 @@ margin-bottom: 50px;
     margin: 1rem;
     padding: 1rem;
     box-sizing: border-box;
-    border: 2px solid #333;
+    border: 4px solid #e0bb63;
     border-radius: 0.5rem;
     overflow: hidden;
     position: relative;
@@ -554,7 +587,7 @@ margin-bottom: 50px;
 
 .gallery-sec {
 
-    background-color: gray;
+    background-color: #444654;
     height: 1200px;
 }
 
@@ -563,7 +596,7 @@ margin-bottom: 50px;
 
     font-family: 'Montserrat', sans-serif;
     color: white;
-    background-color: #28282B;
+    background-color: #202123;
     font-size: 36px;
     font-weight: bold;
     padding-top: 20px;
@@ -767,7 +800,7 @@ margin-bottom: 50px;
 /*__++++++++++++++++++++++++Contact Me++++++++++++++++++__*/
 
 .contact-me {
-    background-color: gray;
+    background-color: #444654;
     height: 850px;
 }
 
@@ -778,9 +811,9 @@ margin-bottom: 50px;
 /* Footer section styles */
 
 .footer {
-    background-color: #f8f8f8;
-    color: #555;
-    font-size: 14px;
+    background-color: #343541;
+    color: #eeeeee;
+    font-size: 16px;
     padding: 30px;
     text-align: center;
 }
@@ -825,6 +858,8 @@ margin-bottom: 50px;
 .footer .rights {
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
+
+    color: #cba546;
 }
 
 /* Media queries for responsive design */
