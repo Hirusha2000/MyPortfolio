@@ -615,8 +615,6 @@ margin-bottom: 50px;
 .gallery-box {
 
 
-
-
     height: 50px;
     background-color: #c2ab5d;
     text-align: center;
@@ -645,7 +643,7 @@ margin-bottom: 50px;
     width: 30%;
     margin: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -914,6 +912,10 @@ margin-bottom: 50px;
     color: #cba546;
 }
 
+.footer.text{
+
+    font-weight: bold;
+}
 /* Media queries for responsive design */
 
 @media (max-width: 768px) {
