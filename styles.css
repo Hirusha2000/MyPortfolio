@@ -168,7 +168,7 @@ input, textarea {
     background-color: #f2f2f2;
     font-size: 16px;
     color: #555;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(130, 108, 46, 0.2);
 }
 input:focus, textarea:focus {
     outline: none;
@@ -185,7 +185,7 @@ input:focus, textarea:focus {
     transition: background-color 0.3s;
 }
 .submit:hover {
-    background-color: #3e8e41;
+    background-color: #8e863e;
 }
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 
@@ -409,8 +409,8 @@ height: 800px;
 /* Style the description */
 .about-me-description {
 
-
     font-family: 'Montserrat', sans-serif;
+
     margin: auto;
     position: relative;
    background-color: gray;
@@ -516,7 +516,7 @@ margin-bottom: 50px;
     padding-top: 15px;
     padding-left: 70px;
     padding-bottom: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     text-align: left
 }
 
@@ -578,7 +578,7 @@ margin-bottom: 50px;
 
 .service-section{
 
-    padding-bottom: 200px;
+    padding-bottom: 80px;
     background-color: #444654;
 }
 
@@ -611,7 +611,7 @@ margin-bottom: 50px;
 
 .projects{
     background-color: #444654;
-    height: 1400px;
+    height: 1200px;
 }
 .project-heading{
 
@@ -626,7 +626,7 @@ margin-bottom: 50px;
     padding-top: 15px;
     padding-left: 70px;
     padding-bottom: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     text-align: left
 
 }
@@ -674,7 +674,7 @@ margin-bottom: 50px;
 .gallery-sec {
 
     background-color: #444654;
-    height: 1400px;
+    height: 1350px;
 }
 
 
@@ -690,7 +690,8 @@ margin-bottom: 50px;
     padding-top: 15px;
     padding-left: 70px;
     padding-bottom: 15px;
-    margin-bottom: 40px;
+
+    margin-top: 40px;
     text-align: left
 }
 
@@ -849,7 +850,7 @@ margin-bottom: 50px;
     margin-left: 40px;
     padding-left: 80px;
     position: relative;
-    left: 50px;
+    left: 80px;
     top: 100px;
     height: 650px;
     width: 850px;
@@ -857,7 +858,7 @@ margin-bottom: 50px;
     grid-gap: 6px;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .my-images > div {
