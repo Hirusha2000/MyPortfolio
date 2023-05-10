@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Hirusha Geeganage-->
+<!--GDSE_62-->
+<head>
+  <meta charset="UTF-8">
+  <title>assignment_04(animations)</title>
+  <meta content="width=device-width initial-scale=1" name="viewport">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    body > main > section:first-child >img {
+      width: 100vw;
+      height: 90vh;
+      background-size: cover;
+      position: relative;
+
+    }
+
+    body > main > section:nth-child(2) {
+      width: max-content;
+      position: absolute;
+      height: 300px;
+      top: 290px;
+      animation-name: city;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes city {
+      from {
+        margin-left: 0;
+      }
+      to {
+        margin-left: -270vw;
+      }
+    }
+
+    body > main > section:nth-child(2) > div {
+      display: flex;
+      width: max-content;
+      height: max-content;
+    }
+
+    body > main > section:nth-child(2) > div:nth-child(1) {
+      height: 38vh;
+    }
+
+    body > main > section:nth-child(2) > div:nth-child(2) {
+      height: 260px;
+      top: 200px;
+    }
+
+    body > main > div:nth-child(3) > img {
+      width: 380px;
+      padding-top: 60px;
+      height: 180px;
+      top: 60vh;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+    }
+
+    body > main > div:nth-child(4) {
+      width: max-content;
+      height: 5px;
+      top: 36vh;
+      bottom: 0;
+      left: -11px;
+      right: 0;
+      margin: auto;
+      position: absolute;
+    }
+
+    body > main > div:nth-child(4) > img:nth-child(1) {
+      width: 75px;
+      height: 75px;
+      margin-top: 100px;
+      margin-right: 155px;
+    }
+
+    body > main > div:nth-child(4) > img:nth-child(2) {
+      width: 75px;
+      height: 75px;
+
+    }
+
+
+    body > main > div:nth-child(4) > img {
+      animation-name: Wheels;
+      animation-iteration-count: infinite;
+      animation-duration: 10s;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+
+    .car{
+      padding-top: 100px;
+    }
+
+    @keyframes Wheels {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(720deg);
+      }
+      100% {
+        transform: rotate(540deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <img alt="sky" src="assets/img/sky.jpg">
+  </section>
+  <section>
+    <div>
+      <img alt="city" src="assets/img/city.png">
+      <img alt="city" src="assets/img/city.png">
+      <img alt="city" src="assets/img/city.png">
+      <img alt="city" src="assets/img/city.png">
+    </div>
+    <div>
+      <img alt="road" src="assets/img/road.jpg">
+      <img alt="road" src="assets/img/road.jpg">
+    </div>
+  </section>
+  <div class="car">
+    <img alt="car" src="assets/img/car.png">
+  </div>
+  <div>
+    <img alt="wheel" src="assets/img/wheel.png">
+    <img alt="wheel" src="assets/img/wheel.png">
+  </div>
+</main>
+</body>
+</html>
