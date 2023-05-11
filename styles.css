@@ -411,7 +411,7 @@ height: 800px;
 
     font-family: 'Montserrat', sans-serif;
 
-    margin: auto;
+   /* margin: auto;*/
     position: relative;
    background-color: gray;
    /* font-family: 'Montserrat', sans-serif;*/
@@ -939,7 +939,25 @@ margin-bottom: 50px;
 
 }
 
+/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
+/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 
+.assignment-heading{
+
+    font-family: 'Montserrat', sans-serif;
+    /*mso-border-shadow: yes;*/
+
+    color: white;
+    background-color: #202123;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-left: 70px;
+    padding-bottom: 15px;
+
+    margin-top: 40px;
+    text-align: left
+}
 
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
