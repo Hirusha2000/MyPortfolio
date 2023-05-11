@@ -940,8 +940,13 @@ margin-bottom: 50px;
 }
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
-/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
+/*__++++++++++++++++++++++++Assignments++++++++++++++++__*/
 
+
+
+.assignments {
+    height: 100vh;
+}
 .assignment-heading{
 
     font-family: 'Montserrat', sans-serif;
@@ -958,6 +963,135 @@ margin-bottom: 50px;
     margin-top: 40px;
     text-align: left
 }
+
+
+.css_case-01 {
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.css_case-02 {
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 230px;
+    margin-top: 20px;
+
+}
+
+
+.css_case-03 {
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 440px;
+    margin-top: 20px;
+
+}
+
+.css_case-04 {
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 650px;
+    margin-top: 20px;
+
+}
+
+.css_case-05 {
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 860px;
+    margin-top: 20px;
+
+}
+
+.css_case-06 {
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 1070px;
+    margin-top: 20px;
+
+}
+
+.Transition_case-01{
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 20px;
+    margin-top: 170px;
+
+}
+
+.Transition_case-02{
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 230px;
+    margin-top: 170px;
+
+}
+
+.Animations_case-01 {
+
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 20px;
+    margin-top: 320px;
+}
+
+.Animations_case-02 {
+
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 230px;
+    margin-top: 320px;
+}
+
+
+.Animations_case-03 {
+
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 440px;
+    margin-top: 320px;
+}
+
+
+.Animations_case-04 {
+
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 650px;
+    margin-top: 320px;
+}
+
+
+
+
+
 
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
