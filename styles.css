@@ -90,22 +90,6 @@ nav a:hover::after {
     transform: scaleX(1);
 }
 
-/*!* Responsive styles *!
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        margin-top: 20px;
-    }
-
-    nav li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-}*/
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 
@@ -1193,13 +1177,13 @@ margin-bottom: 50px;
     }
 
     .about-name {
-        margin-top: 100px;
+        margin-top: 20px;
         font-size: 2rem;
         margin-bottom: 40px;
     }
 
     .about-description {
-      margin-top: 100px;
+      margin-top: 40px;
         font-size: 1.6rem;
 
     }
@@ -1485,14 +1469,6 @@ margin-bottom: 50px;
     .submit:hover {
         background-color: #8e863e;
     }
-
-
-
-
-
-
-
-
 
 
 
