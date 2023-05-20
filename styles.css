@@ -1020,7 +1020,15 @@ margin-bottom: 50px;
 }
 
 
+.Framework_case-01 {
 
+    position:absolute;
+    display: flex;
+    width: 100px;
+    height: 100px ;
+    margin-left: 650px;
+    margin-top: 320px;
+}
 
 
 
