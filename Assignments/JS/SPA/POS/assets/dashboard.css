@@ -1,0 +1,28 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.col {
+    height: 300px;
+}
+
+.content {
+    border-radius: 12px;
+    height: 295px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+}
+
+.content-img {
+    width: 32px;
+    height: 32px;
+}
+
+.div-title {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.content-text {
+    padding-top: 60px;
+    font-size: 48px;
+}
