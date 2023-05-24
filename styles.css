@@ -2699,7 +2699,7 @@ margin-bottom: 50px;
 
     header {
  padding-right: 250px;
-        width: 213.5vw;
+        width: 257vw;
     }
 
     #signature{
@@ -2776,7 +2776,7 @@ margin-bottom: 50px;
     }
     .about {
 
-        width: 226%;
+        width: 256%;
 
     }
 
@@ -2879,24 +2879,24 @@ margin-bottom: 50px;
     }
     .about-me-heading {
 padding-right: 144px;
- width: 205vw;
+ width: 235vw;
 
 
     }
 
     .about-me-message {
-        width: 202vw;
+        width: 236vw;
 
     }
 
     .about-me-description {
-        width: 191vw;
+        width: 206vw;
 
     }
 
     .service-heading{
 
-        width: 204vw;
+        width: 236vw;
 
     }
 
@@ -2910,7 +2910,7 @@ padding-right: 144px;
 
     .sec-box{
 
-       width: 210vw;
+       width: 244vw;
 
     }
 
@@ -2918,21 +2918,21 @@ padding-right: 144px;
     .project-heading{
 
 
-        width: 204vw;
+        width: 232vw;
 
     }
 
     .gallery-heading{
 
 
-        width: 204vw;
+        width: 232vw;
 
 
     }
 
     .gallery-box {
 
-      width: 210vw;
+      width: 246vw;
 
     }
 
@@ -2947,7 +2947,7 @@ padding-right: 144px;
 
     form {
 
-margin-left: 770px;
+margin-left: 652px;
      padding: 60px;
         width: 500px;
         /*margin: 50px auto;*/
@@ -2955,7 +2955,7 @@ margin-left: 770px;
 
 
     .footer {
-        width: 210vw;
+        width: 240vw;
 
     }
 
