@@ -817,7 +817,7 @@ font-size: 18px;
 
 .my-images{
     margin-left: 40px;
-    padding-left: 80px;
+    padding-left: 110px;
     position: relative;
     left: 80px;
     top: 100px;
@@ -2911,7 +2911,7 @@ margin-left: 552px;
 
     .assignment-button-container {
         display: flex;
-left: 500px;
+     left: 500px;
     }
 
     .about-me-button {
