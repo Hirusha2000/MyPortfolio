@@ -546,7 +546,7 @@ font-family: 'Ubuntu', sans-serif;
 
 .projects{
     background: url("assets/img/background2.jpg");
-    height: 1250px;
+    height: 1300px;
 }
 .project-heading{
 
@@ -578,7 +578,7 @@ font-family: 'Ubuntu', sans-serif;
 
 /* Add a hover effect to scale the photo slightly */
 .project-photo:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 
 /* Style the image inside the photo box */
@@ -597,6 +597,58 @@ font-family: 'Ubuntu', sans-serif;
     gap: 1.3rem;
     margin: 1.3rem auto;
 }
+
+
+
+/* Style the button */
+.assignment-button-container {
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 160px;
+    left: 410px;
+    justify-content: center;
+    background-color: #d2ce4c;
+    color: #1c1c0b;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    margin-right: 40px;
+    width: 400px;
+
+}
+
+ .assignment-button-container>a {
+     text-decoration: none;
+     font-weight:bolder;
+ }
+
+
+/* Change the button color on hover */
+.assignment-button-container:hover {
+    background-color: rgba(210, 206, 76, 0.84);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
