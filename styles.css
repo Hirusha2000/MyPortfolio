@@ -605,7 +605,7 @@ font-family: 'Ubuntu', sans-serif;
 
 /* Style the button */
 .assignment-button-container {
-    display: flex;
+    display: none;
     text-decoration: none;
     position: relative;
     padding: 15px;
@@ -664,7 +664,6 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 .gabox {
-
 
     height: 50px;
     background-color: rgba(194, 171, 93, 0.4);
@@ -825,15 +824,15 @@ font-size: 18px;
     height: 650px;
     width: 850px;
     display: grid;
-    grid-gap: 6px;
+    grid-gap: 60px;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
     padding-bottom: 50px;
 }
 
 .my-images > div {
-    border: 1px solid black;
-    box-shadow: 3px 3px 2px darkgray;
+  /*  border: 10px solid black;*/
+    box-shadow: 10px 10px 10px darkgray;
     background-size: cover;
     background-position: center;
 }
@@ -1001,7 +1000,7 @@ font-size: 18px;
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__+++++++++++++++++++++++++Responsive++++++++++++++++__*/
 
-@media all and (max-width: 320px) {
+   @media all and (max-width: 320px) {
 
 
 
@@ -1014,6 +1013,7 @@ font-size: 18px;
         justify-content: center;
         height: 15vh;
         position: fixed;
+        width: 305vw;
 
     }
 
@@ -1050,10 +1050,13 @@ font-size: 18px;
     .about {
         padding-top: 80px;
         padding-bottom:50px;
+        height: 400px;
+        width: 252vw;
 
     }
     .about-image {
        margin-left: -200px;
+        display: none;
     }
 
 
@@ -1080,13 +1083,14 @@ font-size: 18px;
     .about-me-container{
 
         position: relative;
-        height: 580px;
+        height: 450px;
+       width: 263vw;
     }
 
     .about-me-heading {
         text-align: justify;
-      padding-left: 100px;
-
+        padding-left: 360px;
+       width: 140vw;
     }
 
     /* Style the message */
@@ -1107,15 +1111,15 @@ font-size: 18px;
         margin-bottom: 40px;
         font-size: 15px;
         text-align: justify;
-
+background-color: rgba(128, 128, 128, 0.53);
     }
 
     /* Style the button */
     .about-me-button {
         margin-left: 45px;
         margin-right: 40px;
-        width: 50px;
-        left: 50px;
+        width: 100px;
+        left: 316px;
     }
 
     .cybee{
@@ -1127,16 +1131,17 @@ font-size: 18px;
 
     .service-heading{
 
-       text-align: justify;
+      text-align: justify;
         padding-left: 110px;
         padding-bottom: 15px;
         margin-bottom: 40px;
+        width: 228vw;
     }
 
 
     .service-logins {
-
-
+       left: 280px;
+       position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1145,8 +1150,9 @@ font-size: 18px;
 
 
     .sec-box{
-
-        /* width: 100vw;*/
+       display: none;
+       position: relative;
+        z-index: 2;
         height: 50px;
         background-color: #c2ab5d;
         margin-top: 10px;
@@ -1154,16 +1160,20 @@ font-size: 18px;
 
     .service-section {
         padding-bottom: 40px;
+        height: 1400px;
     }
+
 
     /********* projects **************/
-
+       .assignment-button-container {
+           display: none;
+       }
     .projects{
         background-color: #444654;
-        height: 2800px;
+        height: 2900px;
     }
     .project-heading{
-
+       width: 229vw;
         text-align: justify;
         padding-left: 110px;
         padding-bottom: 15px;
@@ -1193,7 +1203,7 @@ font-size: 18px;
 
     .project-grid {
 
-   padding-left: 18px;
+   padding-left:302px;
 
     }
 
@@ -1203,12 +1213,12 @@ font-size: 18px;
     .gallery-sec {
 
         background-color: #444654;
-        height: 1080px;
+        height: 1180px;
     }
 
 
     .gallery-heading{
-
+       width: 228vw;
         text-align: justify;
         padding-left: 110px;
         padding-bottom: 15px;
@@ -1219,13 +1229,15 @@ font-size: 18px;
 
     .gallery-box {
 
-
+        width: 228vw;
         height: 50px;
         background-color: rgba(194, 171, 93, 0.42);
         margin-top: 100px;
     }
 
-
+.gabox {
+    width: 263vw;
+}
 
 .gallery-text {
     font-family: 'Ubuntu', sans-serif;
@@ -1258,6 +1270,8 @@ font-size: 18px;
 
     /* Set up the grid container */
     .certificate-grid {
+        left: 300px;
+        position: relative;
         display: flex;
         flex-direction: column;
         grid-gap: 1rem;
@@ -1302,12 +1316,14 @@ font-size: 18px;
         overflow-x: hidden;
     }
     form {
-        background-color: #444654;
-        border: 10px solid #5e5c2a;
+        left: 200px;
+        position: relative;
+      /*  background-color: #444654;
+        border: 10px solid #5e5c2a;*/
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         padding: 30px;
-        width: 200px;
+        width: 400px;
        /* margin-left: 10px;
         margin-right: 10px;*/
       /*  margin: 50px auto;*/
@@ -1350,22 +1366,24 @@ font-size: 18px;
         background-color: #8e863e;
     }
 
-
+.footer{
+    width: 245vw;
+}
 
 }
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 
 
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
    header {
+
         padding-top: 0px;
         padding-bottom: 0px;
         justify-content: center;
         height: 11%;
         position: fixed;
-       width: 100%;
-       padding-left: 60px;
+      width: 100%;
     }
 
     #signature{
@@ -1689,7 +1707,9 @@ font-size: 18px;
         }
 
 
-
+.assignment-button-container {
+    display: none;
+}
 
         /********* contact-me **************/
 
@@ -1861,8 +1881,8 @@ font-size: 18px;
 
     /* Style the description */
     .about-me-description {
-
-        width: 375%;
+background-color: rgba(128, 128, 128, 0.78);
+        width: 378%;
         height: 40%;
         padding-left: 10px;
         padding-right: 35px;
@@ -1878,7 +1898,7 @@ font-size: 18px;
     .about-me-button {
         margin-left: 133px;
         margin-right: 40px;
-        width: 50px;
+        width: 200px;
         left: 510px;
         font-size: 38px;
     }
@@ -1942,9 +1962,16 @@ font-size: 18px;
 
     /********* projects **************/
 
+    .gabox {
+        display: none;
+    }
+
+  . assignment-button-container>a {
+      display: none;
+  }
     .projects{
         background-color: #444654;
-        height: 2800px;
+        height: 2900px;
     }
     .project-heading{
         width: 360%;
@@ -2047,6 +2074,9 @@ font-size: 18px;
 
     /* Set up the grid container */
     .certificate-grid {
+        position: relative;
+        left: 530px;
+       /* width: 100px;*/
         display: flex;
         flex-direction: row;
         grid-gap: 1rem;
@@ -2059,7 +2089,7 @@ font-size: 18px;
     /* Set up the basic styles for the certificate container */
     .certificate {
         position: relative;
-        width: 300px;
+        width: 500px;
         height: 250px;
         margin-left: 100px;
         border-radius: 0.5rem;
@@ -2125,7 +2155,7 @@ font-size: 18px;
         margin-bottom: 20px;
         border: none;
         border-radius: 5px;
-        background-color: #f2f2f2;
+        background-color: rgba(172, 168, 168, 0.65);
         font-size: 16px;
         color: #555;
         box-shadow: 0 0 5px rgba(130, 108, 46, 0.2);
@@ -2150,9 +2180,9 @@ font-size: 18px;
 
 
     .footer {
-        background-color: #343541;
+        background-color: rgba(52, 53, 65, 0.66);
         color: #eeeeee;
-        width: 373%;
+        width: 375%;
         font-size: 36px;
         padding: 30px;
         text-align: center;
@@ -2166,7 +2196,7 @@ font-size: 18px;
 
     header {
         padding-right: 220px;
-        width: 221.5vw;
+      /*  width: 221.5vw;*/
         padding-top: 0px;
         padding-bottom: 0px;
         justify-content: center;
@@ -2249,7 +2279,7 @@ font-size: 18px;
 
     .about-me-heading {
         text-align: justify;
-        padding-left: 70px;
+        padding-left: 108px;
         width: 392%;
         font-size: 40px;
     }
@@ -2258,7 +2288,7 @@ font-size: 18px;
     .about-me-message {
         width: 391vw;
         text-align: left;
-        padding-left: 70px;
+        padding-left: 110px;
         font-size: 38px;
         margin-bottom: 40px;
     }
@@ -2268,21 +2298,21 @@ font-size: 18px;
 
         width: 364%;
         height: 40%;
-        padding-left: 10%;
+        padding-left: 30%;
         padding-right: 30%;
         padding-top: 80px;
         padding-bottom: 20px;
         margin-bottom: 40px;
         font-size: 36px;
         text-align: center;
-
+background-color: rgba(128, 128, 128, 0.72);
     }
 
     /* Style the button */
     .about-me-button {
-        margin-left: 133px;
+        margin-left: 178px;
         margin-right: 40px;
-        width: 50px;
+        width: 250px;
         left: 510px;
         font-size: 38px;
     }
@@ -2297,7 +2327,7 @@ font-size: 18px;
     .service-heading{
 
         text-align: justify;
-        padding-left: 80px;
+        padding-left: 150px;
         padding-bottom: 15px;
         margin-bottom: 40px;
         width: 381%;
@@ -2307,7 +2337,7 @@ font-size: 18px;
 
     .service-logins {
 
-        padding-left: 140px;
+        padding-left: 214px;
         padding-right: 90px;
         display: flex;
         flex-direction: row;
@@ -2326,7 +2356,7 @@ font-size: 18px;
 
     }
     .sec-box{
-        width: 400%;
+        width: 420%;
         height: 50px;
         background-color: #c2ab5d;
         margin-top: 10px;
@@ -2348,10 +2378,10 @@ font-size: 18px;
 
     .projects{
         background-color: #444654;
-        height: 2800px;
+        height: 2900px;
     }
     .project-heading{
-        width: 375%;
+        width: 392%;
         text-align: justify;
         padding-left: 110px;
         padding-bottom: 15px;
@@ -2385,8 +2415,8 @@ font-size: 18px;
 
 
     .project-grid {
-
-
+left: 100px;
+ position: relative;
         padding-left:646px;
 
     }
@@ -2397,7 +2427,7 @@ font-size: 18px;
     .gallery-sec {
 
         background-color: #444654;
-        height: 1080px;
+        height: 1280px;
     }
     /*
     .gallery-text {
@@ -2409,7 +2439,7 @@ font-size: 18px;
     .gallery-heading{
 
         text-align: justify;
-        padding-left: 110px;
+        padding-left: 180px;
         padding-bottom: 15px;
         margin-bottom: 40px;
         width: 375%;
@@ -2417,6 +2447,7 @@ font-size: 18px;
     }
 
     .gallery-box {
+        display: none;
         font-weight: bolder;
         font-size: 30px;
         width: 400%;
@@ -2451,6 +2482,8 @@ font-size: 18px;
 
     /* Set up the grid container */
     .certificate-grid {
+        left: 600px;
+        position: relative;
         display: flex;
         flex-direction: row;
         grid-gap: 1rem;
@@ -2508,7 +2541,7 @@ font-size: 18px;
     form {
         height: 700px;
         width: 800px;
-        margin-left: 420px;
+        margin-left: 520px;
         font-size: 40px;
         /* margin-left: 10px;
          margin-right: 10px;*/
@@ -2551,12 +2584,14 @@ font-size: 18px;
     .submit:hover {
         background-color: #8e863e;
     }
-
+.gabox {
+    display: none;
+}
 
     .footer {
-        background-color: #343541;
+        background-color: rgba(52, 53, 65, 0.65);
         color: #eeeeee;
-        width: 386%;
+        width: 410%;
         font-size: 36px;
         padding: 30px;
         text-align: center;
@@ -2749,7 +2784,7 @@ font-size: 18px;
     }
     .about-me-heading {
 padding-right: 144px;
- width: 235vw;
+ width: 240vw;
 
 
     }
@@ -2760,16 +2795,22 @@ padding-right: 144px;
     }
 
     .about-me-description {
-        width: 206vw;
+        width: 215vw;
 
     }
 
+    .about-me-button {
+        left: 700px;
+    }
     .service-heading{
 
-        width: 236vw;
+        width: 255vw;
 
     }
-
+    .service-logins {
+        position: relative;
+        left: 170px;
+    }
 
     .service-login img {
 
@@ -2780,22 +2821,32 @@ padding-right: 144px;
 
     .sec-box{
 
-       width: 244vw;
+       width: 274vw;
 
     }
-
+.projects {
+    height: 1100px;
+}
 
     .project-heading{
 
 
-        width: 232vw;
+        width: 260vw;
 
     }
 
+    .project-grid {
+
+        padding-left: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 1.5rem auto;
+    }
     .gallery-heading{
 
 
-        width: 232vw;
+        width: 250vw;
 
 
     }
@@ -2806,6 +2857,9 @@ padding-right: 144px;
 
     }
 
+    .gallery-sec {
+        height: 1100px;
+    }
     .assignments {
         height: 100vh;
     }
@@ -2816,16 +2870,19 @@ padding-right: 144px;
     }
 
     form {
-
+        position: relative;
+        left: 100px;
+background-color: rgba(128, 128, 128, 0.47);
 margin-left: 652px;
      padding: 60px;
         width: 500px;
+        border: none;
         /*margin: 50px auto;*/
     }
 
 
     .footer {
-        width: 240vw;
+        width: 268vw;
 
     }
 
