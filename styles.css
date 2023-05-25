@@ -96,17 +96,20 @@ nav a:hover::after {
 /*__+++++++++++++++++++++++forum+++++++++++++++++++++++__*/
 
 body {
-    background-color: #444654;
-    font-family: Arial, sans-serif;
+  /*  background-color: #444654;*/
+    background: url("assets/img/background.jpg");
+  font-family: 'Ubuntu', sans-serif;
 }
 form {
-    background-color: #444654;
-    border: 10px solid #5e5c2a;
+    /*background-color: #444654;*/
+  /*  background: url("assets/img/background.jpg");*/
+  /*  border: 10px solid rgba(94, 92, 42, 0.54);*/
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 30px;
     width: 500px;
     margin: 50px auto;
+    color: rgba(222, 219, 112, 0.43);
 }
 h2 {
     margin-top: 0;
@@ -123,9 +126,9 @@ input, textarea {
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: rgba(95, 91, 91, 0.55);
     font-size: 16px;
-    color: #555;
+    color: #bab7b7;
     box-shadow: 0 0 5px rgba(130, 108, 46, 0.2);
 }
 input:focus, textarea:focus {
@@ -636,21 +639,6 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__+++++++++++++++++++++++++Gallery+++++++++++++++++++__*/
 
@@ -665,34 +653,32 @@ font-family: 'Ubuntu', sans-serif;
 .gallery-heading{
 
     font-family: 'Montserrat', sans-serif;
-    /*mso-border-shadow: yes;*/
 
     color: white;
-    background-color: #202123;
-    font-size: 24px;
+    background-color: rgba(32, 33, 35, 0.61);
+    font-size: 28px;
     font-weight: bold;
     padding-top: 15px;
-    padding-left: 70px;
     padding-bottom: 15px;
-/*
-    margin-top: 40px;*/
-    text-align: left
+    text-align: center;
 }
 
-.gallery-box {
+.gabox {
 
 
     height: 50px;
-    background-color: #c2ab5d;
+    background-color: rgba(194, 171, 93, 0.4);
     text-align: center;
     margin-top: 100px;
-   margin-bottom: 50px;
-
+    margin-bottom: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.gallery-text {
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px ;
+.gaboxt {
+   font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+font-size: 18px;
     text-align: center ;
 
 }
@@ -924,175 +910,12 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
-/*__++++++++++++++++++++++++Assignments++++++++++++++++__*/
-
-
-
-.assignments {
-    height: 100vh;
-}
-.assignment-heading{
-
-    font-family: 'Montserrat', sans-serif;
-    /*mso-border-shadow: yes;*/
-
-    color: white;
-    background-color: #202123;
-    font-size: 24px;
-    font-weight: bold;
-    padding-top: 15px;
-    padding-left: 70px;
-    padding-bottom: 15px;
-
-    margin-top: 40px;
-    text-align: left
-}
-
-
-.css_case-01 {
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 20px;
-    margin-top: 20px;
-
-}
-
-.css_case-02 {
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 230px;
-    margin-top: 20px;
-
-}
-
-
-.css_case-03 {
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 440px;
-    margin-top: 20px;
-
-}
-
-.css_case-04 {
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 650px;
-    margin-top: 20px;
-
-}
-
-.css_case-05 {
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 860px;
-    margin-top: 20px;
-
-}
-
-.css_case-06 {
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 1070px;
-    margin-top: 20px;
-
-}
-
-.Transition_case-01{
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 20px;
-    margin-top: 170px;
-
-}
-
-.Transition_case-02{
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 230px;
-    margin-top: 170px;
-
-}
-
-.Animations_case-01 {
-
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 20px;
-    margin-top: 320px;
-}
-
-.Animations_case-02 {
-
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 230px;
-    margin-top: 320px;
-}
-
-
-.Animations_case-03 {
-
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 440px;
-    margin-top: 320px;
-}
-
-
-.Animations_case-04 {
-
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 650px;
-    margin-top: 320px;
-}
-
-
-.Framework_case-01 {
-
-    position:absolute;
-    display: flex;
-    width: 100px;
-    height: 100px ;
-    margin-left: 650px;
-    margin-top: 320px;
-}
-
-
-
-
-/*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__+++++++++++++++++++++++++footer++++++++++++++++++++++__*/
 
 /* Footer section styles */
 
 .footer {
-    background-color: #343541;
+    background-color: rgba(52, 53, 65, 0.76);
     color: #eeeeee;
     font-size: 16px;
     padding: 30px;
@@ -1396,12 +1219,20 @@ font-family: 'Ubuntu', sans-serif;
 
     .gallery-box {
 
-        height: 80px;
-        margin-top: 20px;
-        margin-bottom: 20px;
 
+        height: 50px;
+        background-color: rgba(194, 171, 93, 0.42);
+        margin-top: 100px;
     }
 
+
+
+.gallery-text {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
 
     .certificate-container {
         display: flex;
@@ -1456,20 +1287,6 @@ font-family: 'Ubuntu', sans-serif;
        margin-left: -4000px;
 
     }
-    /********* assignments **************/
-
-
-
-
-    .assignments  {
-        height: 0px;
-       margin-left: -2000px;
-    }
-
-.assignment-heading {
-    margin-left: -2000px;
-}
-
 
 
 
