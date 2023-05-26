@@ -16,7 +16,7 @@ header {
     /* padding: 20px;*/
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgba(114, 113, 109, 0.49);
+    background-color: rgba(114, 113, 109, 0.4);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     z-index: 1;
@@ -906,6 +906,19 @@ font-size: 18px;
     align-items: center;
     height: 100px;
 
+}
+
+
+.contact-heading {
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: rgba(32, 33, 35, 0.61);
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
