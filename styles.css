@@ -2212,30 +2212,25 @@ font-size: 20px;
 
 }
 
-@media all and (min-width: 428px) and (max-width: 768px) {
-
-
-
-
-    header {
-        padding-right: 220px;
-      /*  width: 221.5vw;*/
+@media all and (min-width: 428px) and (max-width: 770px) {
+    header{
         padding-top: 0px;
         padding-bottom: 0px;
         justify-content: center;
-        height: 12%;
+        height: 15vh;
         position: fixed;
-        width: 100%;
+        width: 128vw;
+        background-color: rgba(128, 128, 128, 0.83);
     }
 
     #signature{
-        width: 250px;
-        height: 250px;
-        left: 40px;
+
+        display: none;
     }
 
 
     nav {
+        left: 150px;
         position: relative;
         display: flex;
 
@@ -2244,7 +2239,7 @@ font-size: 20px;
     nav ul {
         display: flex;
         list-style: none;
-        margin-left: 50px;
+        margin-right: 100px
 
     }
 
@@ -2255,89 +2250,92 @@ font-size: 20px;
 
     nav a {
 
-        padding: 40px;
-        font-size: 38px;
+        padding: 8px;
+        font-size: 12px;
     }
 
     .about {
-        padding-top: 220px;
-        padding-bottom:50px;
-        width: 384%;
-        padding-left: 145px;
-        height: 700px;
+        padding-top: 50px;
+        padding-bottom:0px;
+        height: 400px;
+        width: 252vw;
+
     }
     .about-image {
 
-        margin-left: -50px;
+        display: none;
     }
 
 
     .about-info {
-        margin-left: 50px;
+
+        margin-right: 545px;
         text-align: center;
     }
 
     .about-name {
-        margin-top: 20px;
-        font-size: 5.5rem;
+        right: 250px;
+        position: relative;
+        padding-right: 157px;
+        margin-top: 73px;
+        font-size: 2rem;
         margin-bottom: 40px;
     }
 
     .about-description {
-        margin-top: 40px;
-        margin-left: 20px;
-        font-size: 3rem;
+        position: relative;
+        right: 250px;
+        margin-top: 44px;
+        font-size: 1.6rem;
+        padding-right: 160px;
 
     }
-
 
 
     /********* about **************/
 
     .about-me-container{
-
         position: relative;
-        height: 780px;
+        height: 450px;
+        width: 263vw;
+        background-color: rgba(128, 128, 128, 0.45);
     }
 
     .about-me-heading {
+        font-size: 20px;
         text-align: justify;
-        padding-left: 108px;
-        width: 392%;
-        font-size: 40px;
+        padding-left: 330px;
+        width: 140vw;
+        font-size: 20px;
     }
 
     /* Style the message */
     .about-me-message {
-        width: 391vw;
-        text-align: left;
-        padding-left: 110px;
-        font-size: 38px;
-        margin-bottom: 40px;
+        display: none;
     }
 
     /* Style the description */
     .about-me-description {
+        margin-top: 80px;
+        top: 50px;
+        height: 230px;
+        padding-left: 20px;
+        padding-right: 1300px;
+        padding-top: 30px;
+        padding-bottom: 0px;
 
-        width: 364%;
-        height: 40%;
-        padding-left: 30%;
-        padding-right: 30%;
-        padding-top: 80px;
-        padding-bottom: 20px;
-        margin-bottom: 40px;
-        font-size: 36px;
-        text-align: center;
-background-color: rgba(128, 128, 128, 0.72);
+        font-size: 15px;
+        text-align: justify;
+        background-color: rgba(128, 128, 128, 0.53);
     }
 
     /* Style the button */
     .about-me-button {
-        margin-left: 178px;
+        bottom: 25px;
+        margin-left: -170px;
         margin-right: 40px;
-        width: 250px;
-        left: 510px;
-        font-size: 38px;
+        width: 100px;
+        left: 480px;
     }
 
     .cybee{
@@ -2348,68 +2346,57 @@ background-color: rgba(128, 128, 128, 0.72);
 
 
     .service-heading{
-
+        font-size: 20px;
         text-align: justify;
-        padding-left: 150px;
+        padding-left: 330px;
         padding-bottom: 15px;
         margin-bottom: 40px;
-        width: 381%;
-        font-size: 48px;
+        width: 228vw;
     }
 
 
     .service-logins {
-
-        padding-left: 214px;
-        padding-right: 90px;
+        top: 50px;
+        left: 5px;
+        position: relative;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
 
-    .service-login img {
 
-        transform: scale(1.3);
-        padding-left: 85px;
-        padding-right: 116px;
-        width: 100%;
-        max-width: 4rem;
-        margin-bottom: 1rem;
-
-    }
     .sec-box{
-        width: 420%;
+        display: none;
+        position: relative;
+        z-index: 2;
         height: 50px;
         background-color: #c2ab5d;
         margin-top: 10px;
-        font-size: 30px;
     }
 
-
-
-
-    .service-description {
-
-        font-size: 48px;
-    }
     .service-section {
-        padding-bottom: 100px;
+        padding-bottom: 40px;
+        height: 1280px;
     }
+
 
     /********* projects **************/
-
+    .assignment-button-container {
+        display: none;
+    }
     .projects{
         background-color: #444654;
-        height: 2900px;
+        height: 1640px;
     }
     .project-heading{
-        width: 392%;
+        font-size: 20px;
+        width: 229vw;
         text-align: justify;
-        padding-left: 110px;
+        padding-left: 330px;
         padding-bottom: 15px;
         margin-bottom: 40px;
-        font-size: 48px;
+
     }
 
 
@@ -2432,15 +2419,9 @@ background-color: rgba(128, 128, 128, 0.72);
     }
 
 
-    .project-photo:hover {
-        transform: scale(1.3);
-    }
-
-
     .project-grid {
-left: 100px;
- position: relative;
-        padding-left:646px;
+        top: 70px;
+        padding-left:70px;
 
     }
 
@@ -2450,38 +2431,43 @@ left: 100px;
     .gallery-sec {
 
         background-color: #444654;
-        height: 1280px;
+        height: 980px;
     }
-    /*
-    .gallery-text {
 
-        width: 340%;
-    }
-    */
 
     .gallery-heading{
-
+        font-size: 20px;
+        width: 228vw;
         text-align: justify;
-        padding-left: 180px;
+        padding-left: 330px;
         padding-bottom: 15px;
         margin-bottom: 40px;
-        width: 375%;
-        font-size: 48px;
+
+
     }
 
     .gallery-box {
         display: none;
-        font-weight: bolder;
-        font-size: 30px;
-        width: 400%;
-        height: 80px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
+        width: 228vw;
+        height: 50px;
+        background-color: rgba(194, 171, 93, 0.42);
+        margin-top: 100px;
     }
 
+    .gabox {
+        width: 263vw;
+        display: none;
+    }
+
+    .gallery-text {
+        font-family: 'Ubuntu', sans-serif;
+        padding: 15px;
+        font-size: 20px;
+        text-align: center;
+    }
 
     .certificate-container {
+
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -2505,14 +2491,17 @@ left: 100px;
 
     /* Set up the grid container */
     .certificate-grid {
-        left: 600px;
+        top: 50px;
+        left: 0px;
+
+        padding-right: 220px;
         position: relative;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         grid-gap: 1rem;
         align-content: flex-end;
         flex-wrap: wrap;
-        margin-left: 30px;
+        margin-left: 0px;
 
     }
 
@@ -2521,7 +2510,7 @@ left: 100px;
         position: relative;
         width: 300px;
         height: 250px;
-        margin-left: 100px;
+        margin-left: 20px;
         border-radius: 0.5rem;
         overflow: hidden;
         display: flex;
@@ -2536,25 +2525,16 @@ left: 100px;
         margin-left: -4000px;
 
     }
-    /********* assignments **************/
-
-
-
-
-    .assignments  {
-        height: 0px;
-        margin-left: -2000px;
-    }
-
-    .assignment-heading {
-        width: 243%;
-        margin-left: -2000px;
-    }
-
 
 
 
     /********* contact-me **************/
+
+
+    .contact-heading {
+        font-size: 20px;
+    }
+
 
     body {
         background-color: #444654;
@@ -2562,10 +2542,14 @@ left: 100px;
         overflow-x: hidden;
     }
     form {
-        height: 700px;
-        width: 800px;
-        margin-left: 520px;
-        font-size: 40px;
+        left: -10px;
+        position: relative;
+        /*  background-color: #444654;
+          border: 10px solid #5e5c2a;*/
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        width:500px;
         /* margin-left: 10px;
          margin-right: 10px;*/
         /*  margin: 50px auto;*/
@@ -2595,6 +2579,8 @@ left: 100px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     }
     .submit {
+
+        width: 520px;
         background-color: #009240;
         color: white;
         padding: 10px 20px;
@@ -2607,25 +2593,19 @@ left: 100px;
     .submit:hover {
         background-color: #8e863e;
     }
-.gabox {
-    display: none;
-}
-    input,textarea {
 
-        background-color: rgba(128, 128, 128, 0.49);
+    .footer{
+        width: 95vw;
     }
-    .footer {
-        background-color: rgba(52, 53, 65, 0.65);
-        color: #eeeeee;
-        width: 410%;
-        font-size: 36px;
-        padding: 30px;
-        text-align: center;
+    .audio-container {
+position: relative;
+        left: 200px;
     }
+
 
 }
 
-@media all and (min-width: 768px) and (max-width: 1023px) {
+@media all and (min-width: 771px) and (max-width: 1023px) {
 
     header {
  padding-right: 250px;
