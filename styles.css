@@ -1,3 +1,20 @@
+
+/* Set the color of the track (background) */
+::-webkit-scrollbar {
+    background-color: rgba(49, 45, 45, 0.91); /* Change this to your desired color */
+}
+
+/* Set the color of the thumb (the draggable scrolling element) */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.85); /* Change this to your desired color */
+}
+
+/* Set the color of the thumb when hovering over it */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(163, 172, 42); /* Change this to your desired color */
+}
+
+
 *{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -7,6 +24,7 @@
 }
 
 /*__+++++++++++++++++++++++header+++++++++++++++++++++++__*/
+
 
 /* Header styles */
 header {
@@ -101,6 +119,8 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 form {
+    position: relative;
+    top: 50px;
     /*background-color: #444654;*/
   /*  background: url("assets/img/background.jpg");*/
   /*  border: 10px solid rgba(94, 92, 42, 0.54);*/
@@ -335,7 +355,8 @@ height: 800px;
 
 }
 .about-me-heading {
-
+    position: relative;
+top: 72px;
     font-family: 'Montserrat', sans-serif;
 
 
@@ -352,6 +373,8 @@ height: 800px;
 
 /* Style the message */
 .about-me-message {
+    position: relative;
+    top: 80px;
 /*    background-color: #bbb774;*/
     color: rgba(255, 255, 0, 0.52);
     font-family: 'Montserrat', sans-serif;
@@ -370,7 +393,7 @@ font-family: 'Cambria', serif;
    background-color: rgba(128, 128, 128, 0.31);
     padding-left: 120px;
     padding-right: 120px;
-    padding-top: 30px;
+    padding-top: 80px;
     padding-bottom: 30px;
 
    font-weight: bolder;
@@ -454,7 +477,8 @@ padding-top: 20px;
 }
 
 .service-heading{
-
+position: relative;
+    top: 72px;
     font-family: 'Montserrat', sans-serif;
     /*mso-border-shadow: yes;*/
 
@@ -552,7 +576,8 @@ font-family: 'Ubuntu', sans-serif;
     height: 1300px;
 }
 .project-heading{
-
+position: relative;
+    top: 72px;
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: #202123;
@@ -593,7 +618,8 @@ font-family: 'Ubuntu', sans-serif;
 
 /* Create a grid layout for the photos */
 .project-grid {
-
+ position: relative;
+    top: 30px;
     padding-left: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -605,6 +631,7 @@ font-family: 'Ubuntu', sans-serif;
 
 /* Style the button */
 .assignment-button-container {
+    top: 30px;
     display: none;
     text-decoration: none;
     position: relative;
@@ -651,7 +678,8 @@ font-family: 'Ubuntu', sans-serif;
 
 
 .gallery-heading{
-
+position: relative;
+    top: 72px;
     font-family: 'Montserrat', sans-serif;
 
     color: white;
@@ -910,7 +938,8 @@ font-size: 18px;
 
 
 .contact-heading {
-
+position: relative;
+    top: 72px;
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: rgba(32, 33, 35, 0.61);
@@ -1026,13 +1055,13 @@ font-size: 18px;
         justify-content: center;
         height: 15vh;
         position: fixed;
-        width: 305vw;
+        width: 128vw;
 
     }
 
     #signature{
 
-        left: -40px;
+      display: none;
     }
 
 
