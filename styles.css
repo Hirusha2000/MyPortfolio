@@ -1,4 +1,3 @@
-
 /* Set the color of the track (background) */
 ::-webkit-scrollbar {
     background-color: rgba(49, 45, 45, 0.91); /* Change this to your desired color */
@@ -15,7 +14,7 @@
 }
 
 
-*{
+* {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
 
@@ -41,7 +40,7 @@ header {
     width: 100vw;
 }
 
-#signature{
+#signature {
 
     max-height: 50px;
     /*height: auto;*/
@@ -68,7 +67,7 @@ nav ul {
 }
 
 nav li {
-    right:20px;
+    right: 20px;
     margin-left: 20px;
 }
 
@@ -114,16 +113,17 @@ nav a:hover::after {
 /*__+++++++++++++++++++++++forum+++++++++++++++++++++++__*/
 
 body {
-  /*  background-color: #444654;*/
+    /*  background-color: #444654;*/
     background: url("assets/img/background.jpg");
-  font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
+
 form {
     position: relative;
     top: 50px;
     /*background-color: #444654;*/
-  /*  background: url("assets/img/background.jpg");*/
-  /*  border: 10px solid rgba(94, 92, 42, 0.54);*/
+    /*  background: url("assets/img/background.jpg");*/
+    /*  border: 10px solid rgba(94, 92, 42, 0.54);*/
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 30px;
@@ -131,14 +131,17 @@ form {
     margin: 50px auto;
     color: rgba(255, 255, 0, 0.72);
 }
+
 h2 {
     margin-top: 0;
 }
+
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
+
 input, textarea {
     display: block;
     width: 100%;
@@ -151,10 +154,12 @@ input, textarea {
     color: #bab7b7;
     box-shadow: 0 0 5px rgba(130, 108, 46, 0.2);
 }
+
 input:focus, textarea:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
+
 .submit {
     justify-content: center;
     width: 520px;
@@ -168,10 +173,10 @@ input:focus, textarea:focus {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .submit:hover {
     background-color: rgba(255, 255, 0, 0.71);
 }
-
 
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
@@ -179,29 +184,29 @@ input:focus, textarea:focus {
 /*__++++++++++++++++++++++My name & photo++++++++++++++++++++++__*/
 
 
-main>section:nth-child(1){
+main > section:nth-child(1) {
 
     background-color: #343541;
     /*343541*/
     /*444654*/
 }
+
 .about {
 
     padding-top: 160px;
-    padding-bottom:100px;
-     background: url("assets/img/background.jpg");
+    padding-bottom: 100px;
+    background: url("assets/img/background.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
-   /* padding: 50px 0;*/
-  /*  background-color: #f9f9f9;*/
+    /* padding: 50px 0;*/
+    /*  background-color: #f9f9f9;*/
 }
-
 
 
 .about-image {
 
-background-color: rgba(114, 113, 109, 0.46);
+    background-color: rgba(114, 113, 109, 0.46);
     padding-top: 30px;
     width: 300px;
     height: 300px;
@@ -244,9 +249,7 @@ background-color: rgba(114, 113, 109, 0.46);
     color: #dbd6cd;
 
 
-
 }
-
 
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
@@ -268,6 +271,7 @@ background-color: rgba(114, 113, 109, 0.46);
     border-radius: 100%;
     background-color: #37792f;
 }
+
 .button img {
     width: 50px;
     height: 50px;
@@ -330,35 +334,31 @@ background-color: rgba(114, 113, 109, 0.46);
 }
 
 
-
-
-
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__+++++++++++++++++++++About Me++++++++++++++++++++++__*/
 
 
-
-
-main>section:nth-child(2)>div:nth-child(1)>p:nth-child(3){
+main > section:nth-child(2) > div:nth-child(1) > p:nth-child(3) {
     padding-right: -100px;
 
 }
 
-.about-me-container{
-/* background-color: rgba(0, 0, 0, 0.84);*/
+.about-me-container {
+    /* background-color: rgba(0, 0, 0, 0.84);*/
     position: relative;
     height: 850px;
     background: url("assets/img/background2.jpg");
 }
 
-main>section:nth-child(2){
+main > section:nth-child(2) {
     background-color: #000000;
-height: 800px;
+    height: 800px;
 
 }
+
 .about-me-heading {
     position: relative;
-top: 72px;
+    top: 72px;
     font-family: 'Montserrat', sans-serif;
 
 
@@ -369,7 +369,7 @@ top: 72px;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 40px;
-   text-align: center;
+    text-align: center;
 
 }
 
@@ -377,7 +377,7 @@ top: 72px;
 .about-me-message {
     position: relative;
     top: 80px;
-/*    background-color: #bbb774;*/
+    /*    background-color: #bbb774;*/
     color: yellow;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
@@ -390,15 +390,15 @@ top: 72px;
 /* Style the description */
 .about-me-description {
 
-font-family: 'Cambria', serif;
+    font-family: 'Cambria', serif;
     position: relative;
-   background-color: rgba(128, 128, 128, 0.31);
+    background-color: rgba(128, 128, 128, 0.31);
     padding-left: 120px;
     padding-right: 120px;
     padding-top: 80px;
     padding-bottom: 30px;
 
-   font-weight: bolder;
+    font-weight: bolder;
     margin-bottom: 20px;
     font-size: 20px;
     text-align: justify;
@@ -427,7 +427,6 @@ font-family: 'Cambria', serif;
 }
 
 
-
 /* Change the button color on hover */
 .about-me-button:hover {
     background-color: rgba(255, 255, 0, 0.53);
@@ -449,23 +448,18 @@ margin-bottom: 50px;
 }*/
 
 
-.cybee{
+.cybee {
     display: inline;
-   width: 600px;
+    width: 600px;
     height: 300px;
-padding-top: 20px;
-  padding-left: 330px;
+    padding-top: 20px;
+    padding-left: 330px;
 
 }
 
 
-
-
-
-
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__++++++++++++++++++++++++Services+++++++++++++++++++__*/
-
 
 
 .img_gray {
@@ -478,8 +472,8 @@ padding-top: 20px;
     filter: none;
 }
 
-.service-heading{
-position: relative;
+.service-heading {
+    position: relative;
     top: 72px;
     font-family: 'Montserrat', sans-serif;
     /*mso-border-shadow: yes;*/
@@ -494,7 +488,7 @@ position: relative;
     text-align: center;
 }
 
-.service-1{
+.service-1 {
 
 }
 
@@ -540,45 +534,46 @@ position: relative;
     font-weight: bolder;
 }
 
-.service-section{
+.service-section {
 
     padding-bottom: 80px;
     background: url("assets/img/background2.jpg");
 }
 
-.sec-box{
+.sec-box {
 
-   /* width: 100vw;*/
+    /* width: 100vw;*/
     height: 50px;
     background-color: rgba(194, 171, 93, 0.42);
     margin-top: 100px;
 }
 
-.sec-box>p{
-font-family: 'Ubuntu', sans-serif;
+.sec-box > p {
+    font-family: 'Ubuntu', sans-serif;
     padding: 15px;
     font-size: 20px;
     text-align: center;
 }
-.service-description{
+
+.service-description {
 
     text-align: center;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
-   font-size: 20px;
+    font-size: 20px;
 }
 
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__++++++++++++++++++++++++projects+++++++++++++++++++__*/
 
 
-
-.projects{
+.projects {
     background: url("assets/img/background2.jpg");
     height: 1300px;
 }
-.project-heading{
-position: relative;
+
+.project-heading {
+    position: relative;
     top: 72px;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -588,7 +583,7 @@ position: relative;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 80px;
-  text-align: center;
+    text-align: center;
 
 }
 
@@ -620,7 +615,7 @@ position: relative;
 
 /* Create a grid layout for the photos */
 .project-grid {
- position: relative;
+    position: relative;
     top: 30px;
     padding-left: 40px;
     display: grid;
@@ -628,7 +623,6 @@ position: relative;
     gap: 1.3rem;
     margin: 1.3rem auto;
 }
-
 
 
 /* Style the button */
@@ -654,10 +648,10 @@ position: relative;
 
 }
 
- .assignment-button-container>a {
-     text-decoration: none;
-     font-weight:bolder;
- }
+.assignment-button-container > a {
+    text-decoration: none;
+    font-weight: bolder;
+}
 
 
 /* Change the button color on hover */
@@ -674,13 +668,13 @@ position: relative;
 .gallery-sec {
 
     background: url("assets/img/background2.jpg");
-   /* background-color: #444654;*/
+    /* background-color: #444654;*/
     height: 1350px;
 }
 
 
-.gallery-heading{
-position: relative;
+.gallery-heading {
+    position: relative;
     top: 72px;
     font-family: 'Montserrat', sans-serif;
 
@@ -705,13 +699,12 @@ position: relative;
 }
 
 .gaboxt {
-   font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: bolder;
-font-size: 18px;
-    text-align: center ;
+    font-size: 18px;
+    text-align: center;
 
 }
-
 
 
 .certificate-container {
@@ -724,8 +717,8 @@ font-size: 18px;
 .certificate {
     width: 30%;
     margin: 1rem;
-   /* border: 1px solid #ccc;
-    border-radius: 10px;*/
+    /* border: 1px solid #ccc;
+     border-radius: 10px;*/
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -735,7 +728,6 @@ font-size: 18px;
     height: auto;
     object-fit: contain;
 }
-
 
 
 /* Set up the grid container */
@@ -845,7 +837,7 @@ font-size: 18px;
 /*
 ////////my-images//////////////*/
 
-.my-images{
+.my-images {
     margin-left: 40px;
     padding-left: 110px;
     position: relative;
@@ -861,26 +853,26 @@ font-size: 18px;
 }
 
 .my-images > div {
-  /*  border: 10px solid black;*/
+    /*  border: 10px solid black;*/
     box-shadow: 10px 10px 10px darkgray;
     background-size: cover;
     background-position: center;
 }
 
-.my-images> div:nth-child(1) {
+.my-images > div:nth-child(1) {
     background-image: url("assets/img/4.jpg");
     background-size: 100% 100%;
     background-position: center;
     grid-column: 1/3;
 }
 
-.my-images> div:nth-child(2) {
+.my-images > div:nth-child(2) {
     background-image: url("assets/img/5.jpg");
     background-size: 100% 100%;
     background-position: center;
 }
 
-.my-images> div:nth-child(3) {
+.my-images > div:nth-child(3) {
     background-image: url("assets/img/3.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -888,19 +880,19 @@ font-size: 18px;
     grid-row: 1/4;
 }
 
-.my-images> div:nth-child(4) {
+.my-images > div:nth-child(4) {
     background-image: url("assets/img/6.jpg");
     background-size: 100% 100%;
     background-position: center;
 }
 
-.my-images> div:nth-child(5) {
+.my-images > div:nth-child(5) {
     background-image: url("assets/img/3.jpg");
     background-size: 100% 100%;
     background-position: center;
 }
 
-.my-images> div:nth-child(6) {
+.my-images > div:nth-child(6) {
     background-image: url("assets/img/7.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -924,9 +916,11 @@ font-size: 18px;
 .img_gray_2 {
     filter: grayscale(1);
 }
-.img_gray_2:hover{
+
+.img_gray_2:hover {
     filter: none;
 }
+
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 
@@ -940,7 +934,7 @@ font-size: 18px;
 
 
 .contact-heading {
-position: relative;
+    position: relative;
     top: 72px;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -1006,10 +1000,11 @@ position: relative;
 }
 
 
-.footer.mailtp{
+.footer.mailtp {
 
     font-weight: bolder;
 }
+
 .footer .rights {
     align-content: center;
     font-family: 'Montserrat', sans-serif;
@@ -1019,10 +1014,11 @@ position: relative;
     color: rgba(255, 255, 0, 0.69);
 }
 
-.footer.text{
+.footer.text {
 
     font-weight: bold;
 }
+
 /* Media queries for responsive design */
 
 @media (max-width: 768px) {
@@ -1048,26 +1044,23 @@ position: relative;
 /*__+++++++++++++++++++++++++++++++++++++++++++++++++++__*/
 /*__+++++++++++++++++++++++++Responsive++++++++++++++++__*/
 
-   @media all and (max-width: 320px) {
+@media all and (max-width: 320px) {
 
 
-
- /*   ************name**********/
-
-
-    header{
+    /*   ************name**********/
+    header {
         padding-top: 0px;
         padding-bottom: 0px;
         justify-content: center;
         height: 15vh;
         position: fixed;
         width: 128vw;
-background-color: rgba(128, 128, 128, 0.83);
+        background-color: rgba(128, 128, 128, 0.83);
     }
 
-    #signature{
+    #signature {
 
-      display: none;
+        display: none;
     }
 
 
@@ -1085,7 +1078,7 @@ background-color: rgba(128, 128, 128, 0.83);
     }
 
     nav li {
-        right:0px;
+        right: 0px;
         margin-left: 0px;
     }
 
@@ -1097,13 +1090,14 @@ background-color: rgba(128, 128, 128, 0.83);
 
     .about {
         padding-top: 50px;
-        padding-bottom:0px;
+        padding-bottom: 0px;
         height: 400px;
         width: 252vw;
 
     }
+
     .about-image {
-       margin-left: -200px;
+        margin-left: -200px;
         display: none;
     }
 
@@ -1122,18 +1116,17 @@ background-color: rgba(128, 128, 128, 0.83);
     }
 
     .about-description {
-      margin-top: 40px;
+        margin-top: 40px;
         font-size: 1.6rem;
 
     }
 
 
-/********* about **************/
-
-    .about-me-container{
+    /********* about **************/
+    .about-me-container {
         position: relative;
         height: 450px;
-       width: 263vw;
+        width: 263vw;
         background-color: rgba(128, 128, 128, 0.45);
     }
 
@@ -1141,7 +1134,7 @@ background-color: rgba(128, 128, 128, 0.83);
         font-size: 20px;
         text-align: justify;
         padding-left: 105px;
-       width: 140vw;
+        width: 140vw;
 
     }
 
@@ -1153,7 +1146,7 @@ background-color: rgba(128, 128, 128, 0.83);
     /* Style the description */
     .about-me-description {
         margin-top: 80px;
-top: 50px;
+        top: 50px;
         height: 230px;
         padding-left: 10px;
         padding-right: 550px;
@@ -1162,7 +1155,7 @@ top: 50px;
         margin-bottom: 40px;
         font-size: 15px;
         text-align: justify;
-background-color: rgba(128, 128, 128, 0.53);
+        background-color: rgba(128, 128, 128, 0.53);
     }
 
     /* Style the button */
@@ -1173,16 +1166,14 @@ background-color: rgba(128, 128, 128, 0.53);
         left: 316px;
     }
 
-    .cybee{
+    .cybee {
         margin-left: -4000px;
     }
 
     /********* services **************/
-
-
-    .service-heading{
-    font-size: 20px;
-      text-align: justify;
+    .service-heading {
+        font-size: 20px;
+        text-align: justify;
         padding-left: 110px;
         padding-bottom: 15px;
         margin-bottom: 40px;
@@ -1192,8 +1183,8 @@ background-color: rgba(128, 128, 128, 0.53);
 
     .service-logins {
         top: 50px;
-       left: 0px;
-       position: relative;
+        left: 0px;
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1201,9 +1192,9 @@ background-color: rgba(128, 128, 128, 0.53);
     }
 
 
-    .sec-box{
-       display: none;
-       position: relative;
+    .sec-box {
+        display: none;
+        position: relative;
         z-index: 2;
         height: 50px;
         background-color: #c2ab5d;
@@ -1217,16 +1208,18 @@ background-color: rgba(128, 128, 128, 0.53);
 
 
     /********* projects **************/
-       .assignment-button-container {
-           display: none;
-       }
-    .projects{
+    .assignment-button-container {
+        display: none;
+    }
+
+    .projects {
         background-color: #444654;
         height: 2840px;
     }
-    .project-heading{
+
+    .project-heading {
         font-size: 20px;
-       width: 229vw;
+        width: 229vw;
         text-align: justify;
         padding-left: 110px;
         padding-bottom: 15px;
@@ -1255,14 +1248,12 @@ background-color: rgba(128, 128, 128, 0.53);
 
 
     .project-grid {
-top: 70px;
-   padding-left:10px;
+        top: 70px;
+        padding-left: 10px;
 
     }
 
     /********* gallery **************/
-
-
     .gallery-sec {
 
         background-color: #444654;
@@ -1270,9 +1261,9 @@ top: 70px;
     }
 
 
-    .gallery-heading{
+    .gallery-heading {
         font-size: 20px;
-       width: 228vw;
+        width: 228vw;
         text-align: justify;
         padding-left: 115px;
         padding-bottom: 15px;
@@ -1282,24 +1273,24 @@ top: 70px;
     }
 
     .gallery-box {
-display: none;
+        display: none;
         width: 228vw;
         height: 50px;
         background-color: rgba(194, 171, 93, 0.42);
         margin-top: 100px;
     }
 
-.gabox {
-    width: 263vw;
-    display: none;
-}
+    .gabox {
+        width: 263vw;
+        display: none;
+    }
 
-.gallery-text {
-    font-family: 'Ubuntu', sans-serif;
-    padding: 15px;
-    font-size: 20px;
-    text-align: center;
-}
+    .gallery-text {
+        font-family: 'Ubuntu', sans-serif;
+        padding: 15px;
+        font-size: 20px;
+        text-align: center;
+    }
 
     .certificate-container {
         display: flex;
@@ -1322,7 +1313,6 @@ display: none;
     }
 
 
-
     /* Set up the grid container */
     .certificate-grid {
         top: 50px;
@@ -1331,8 +1321,8 @@ display: none;
         display: flex;
         flex-direction: column;
         grid-gap: 1rem;
-       align-content: flex-end;
-       flex-wrap: wrap;
+        align-content: flex-end;
+        flex-wrap: wrap;
         margin-left: 30px;
 
     }
@@ -1351,21 +1341,17 @@ display: none;
         perspective: 1000px;
     }
 
-   /* ////////my-images//////////////*/
-
-    .my-images{
-       margin-left: -4000px;
+    /* ////////my-images//////////////*/
+    .my-images {
+        margin-left: -4000px;
 
     }
 
 
-
     /********* contact-me **************/
-
-
-.contact-heading {
-    font-size: 20px;
-}
+    .contact-heading {
+        font-size: 20px;
+    }
 
 
     body {
@@ -1373,27 +1359,31 @@ display: none;
         font-family: Arial, sans-serif;
         overflow-x: hidden;
     }
+
     form {
         left: -10px;
         position: relative;
-      /*  background-color: #444654;
-        border: 10px solid #5e5c2a;*/
+        /*  background-color: #444654;
+          border: 10px solid #5e5c2a;*/
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         padding: 30px;
         width: 200px;
-       /* margin-left: 10px;
-        margin-right: 10px;*/
-      /*  margin: 50px auto;*/
+        /* margin-left: 10px;
+         margin-right: 10px;*/
+        /*  margin: 50px auto;*/
     }
+
     h2 {
         margin-top: 0;
     }
+
     label {
         display: block;
         font-weight: bold;
         margin-bottom: 5px;
     }
+
     input, textarea {
         display: block;
         width: 100%;
@@ -1406,10 +1396,12 @@ display: none;
         color: #555;
         box-shadow: 0 0 5px rgba(130, 108, 46, 0.2);
     }
+
     input:focus, textarea:focus {
         outline: none;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     }
+
     .submit {
         width: 220px;
         background-color: #009240;
@@ -1421,13 +1413,14 @@ display: none;
         cursor: pointer;
         transition: background-color 0.3s;
     }
+
     .submit:hover {
         background-color: #8e863e;
     }
 
-.footer{
-    width: 77vw;
-}
+    .footer {
+        width: 77vw;
+    }
 
 }
 
@@ -1437,11 +1430,8 @@ display: none;
 @media all and (min-width: 321px) and (max-width: 376px) {
 
 
-
     /*   ************name**********/
-
-
-    header{
+    header {
         padding-top: 0px;
         padding-bottom: 0px;
         justify-content: center;
@@ -1451,7 +1441,7 @@ display: none;
         background-color: rgba(128, 128, 128, 0.83);
     }
 
-    #signature{
+    #signature {
 
         display: none;
     }
@@ -1471,7 +1461,7 @@ display: none;
     }
 
     nav li {
-        right:0px;
+        right: 0px;
         margin-left: 0px;
     }
 
@@ -1483,11 +1473,12 @@ display: none;
 
     .about {
         padding-top: 50px;
-        padding-bottom:0px;
+        padding-bottom: 0px;
         height: 400px;
         width: 252vw;
 
     }
+
     .about-image {
         margin-left: -200px;
         display: none;
@@ -1501,7 +1492,7 @@ display: none;
     }
 
     .about-name {
-      padding-right: 68px;
+        padding-right: 68px;
         margin-top: 43px;
         font-size: 2rem;
         margin-bottom: 40px;
@@ -1516,8 +1507,7 @@ display: none;
 
 
     /********* about **************/
-
-    .about-me-container{
+    .about-me-container {
         position: relative;
         height: 450px;
         width: 263vw;
@@ -1529,7 +1519,7 @@ display: none;
         text-align: justify;
         padding-left: 135px;
         width: 140vw;
-font-size: 20px;
+        font-size: 20px;
     }
 
     /* Style the message */
@@ -1560,14 +1550,12 @@ font-size: 20px;
         left: 316px;
     }
 
-    .cybee{
+    .cybee {
         margin-left: -4000px;
     }
 
     /********* services **************/
-
-
-    .service-heading{
+    .service-heading {
         font-size: 20px;
         text-align: justify;
         padding-left: 140px;
@@ -1588,7 +1576,7 @@ font-size: 20px;
     }
 
 
-    .sec-box{
+    .sec-box {
         display: none;
         position: relative;
         z-index: 2;
@@ -1607,11 +1595,13 @@ font-size: 20px;
     .assignment-button-container {
         display: none;
     }
-    .projects{
+
+    .projects {
         background-color: #444654;
         height: 2840px;
     }
-    .project-heading{
+
+    .project-heading {
         font-size: 20px;
         width: 229vw;
         text-align: justify;
@@ -1643,13 +1633,11 @@ font-size: 20px;
 
     .project-grid {
         top: 70px;
-        padding-left:40px;
+        padding-left: 40px;
 
     }
 
     /********* gallery **************/
-
-
     .gallery-sec {
 
         background-color: #444654;
@@ -1657,7 +1645,7 @@ font-size: 20px;
     }
 
 
-    .gallery-heading{
+    .gallery-heading {
         font-size: 20px;
         width: 228vw;
         text-align: justify;
@@ -1709,7 +1697,6 @@ font-size: 20px;
     }
 
 
-
     /* Set up the grid container */
     .certificate-grid {
         padding-right: 10px;
@@ -1741,17 +1728,13 @@ font-size: 20px;
     }
 
     /* ////////my-images//////////////*/
-
-    .my-images{
+    .my-images {
         margin-left: -4000px;
 
     }
 
 
-
     /********* contact-me **************/
-
-
     .contact-heading {
         font-size: 20px;
     }
@@ -1762,6 +1745,7 @@ font-size: 20px;
         font-family: Arial, sans-serif;
         overflow-x: hidden;
     }
+
     form {
         left: -10px;
         position: relative;
@@ -1770,19 +1754,22 @@ font-size: 20px;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         padding: 30px;
-        width:250px;
+        width: 250px;
         /* margin-left: 10px;
          margin-right: 10px;*/
         /*  margin: 50px auto;*/
     }
+
     h2 {
         margin-top: 0;
     }
+
     label {
         display: block;
         font-weight: bold;
         margin-bottom: 5px;
     }
+
     input, textarea {
         display: block;
         width: 100%;
@@ -1795,10 +1782,12 @@ font-size: 20px;
         color: #555;
         box-shadow: 0 0 5px rgba(130, 108, 46, 0.2);
     }
+
     input:focus, textarea:focus {
         outline: none;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     }
+
     .submit {
 
         width: 270px;
@@ -1811,15 +1800,14 @@ font-size: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
+
     .submit:hover {
         background-color: #8e863e;
     }
 
-    .footer{
+    .footer {
         width: 80vw;
     }
-
-
 
 
 }
@@ -1827,7 +1815,7 @@ font-size: 20px;
 @media all and  (min-width: 377px) and (max-width: 427px) {
 
 
-    header{
+    header {
         padding-top: 0px;
         padding-bottom: 0px;
         justify-content: center;
@@ -1837,7 +1825,7 @@ font-size: 20px;
         background-color: rgba(128, 128, 128, 0.83);
     }
 
-    #signature{
+    #signature {
 
         display: none;
     }
@@ -1857,7 +1845,7 @@ font-size: 20px;
     }
 
     nav li {
-        right:0px;
+        right: 0px;
         margin-left: 0px;
     }
 
@@ -1869,11 +1857,12 @@ font-size: 20px;
 
     .about {
         padding-top: 50px;
-        padding-bottom:0px;
+        padding-bottom: 0px;
         height: 400px;
         width: 252vw;
 
     }
+
     .about-image {
 
         display: none;
@@ -1903,8 +1892,7 @@ font-size: 20px;
 
 
     /********* about **************/
-
-    .about-me-container{
+    .about-me-container {
         position: relative;
         height: 450px;
         width: 263vw;
@@ -1948,14 +1936,12 @@ font-size: 20px;
         left: 316px;
     }
 
-    .cybee{
+    .cybee {
         margin-left: -4000px;
     }
 
     /********* services **************/
-
-
-    .service-heading{
+    .service-heading {
         font-size: 20px;
         text-align: justify;
         padding-left: 170px;
@@ -1976,7 +1962,7 @@ font-size: 20px;
     }
 
 
-    .sec-box{
+    .sec-box {
         display: none;
         position: relative;
         z-index: 2;
@@ -1995,11 +1981,13 @@ font-size: 20px;
     .assignment-button-container {
         display: none;
     }
-    .projects{
+
+    .projects {
         background-color: #444654;
         height: 2840px;
     }
-    .project-heading{
+
+    .project-heading {
         font-size: 20px;
         width: 229vw;
         text-align: justify;
@@ -2031,13 +2019,11 @@ font-size: 20px;
 
     .project-grid {
         top: 70px;
-        padding-left:70px;
+        padding-left: 70px;
 
     }
 
     /********* gallery **************/
-
-
     .gallery-sec {
 
         background-color: #444654;
@@ -2045,7 +2031,7 @@ font-size: 20px;
     }
 
 
-    .gallery-heading{
+    .gallery-heading {
         font-size: 20px;
         width: 228vw;
         text-align: justify;
@@ -2098,12 +2084,11 @@ font-size: 20px;
     }
 
 
-
     /* Set up the grid container */
     .certificate-grid {
         top: 50px;
         left: 0px;
-     padding-right: 35px;
+        padding-right: 35px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -2129,17 +2114,13 @@ font-size: 20px;
     }
 
     /* ////////my-images//////////////*/
-
-    .my-images{
+    .my-images {
         margin-left: -4000px;
 
     }
 
 
-
     /********* contact-me **************/
-
-
     .contact-heading {
         font-size: 20px;
     }
@@ -2150,6 +2131,7 @@ font-size: 20px;
         font-family: Arial, sans-serif;
         overflow-x: hidden;
     }
+
     form {
         left: -10px;
         position: relative;
@@ -2158,19 +2140,22 @@ font-size: 20px;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         padding: 30px;
-        width:300px;
+        width: 300px;
         /* margin-left: 10px;
          margin-right: 10px;*/
         /*  margin: 50px auto;*/
     }
+
     h2 {
         margin-top: 0;
     }
+
     label {
         display: block;
         font-weight: bold;
         margin-bottom: 5px;
     }
+
     input, textarea {
         display: block;
         width: 100%;
@@ -2183,10 +2168,12 @@ font-size: 20px;
         color: #555;
         box-shadow: 0 0 5px rgba(130, 108, 46, 0.2);
     }
+
     input:focus, textarea:focus {
         outline: none;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     }
+
     .submit {
 
         width: 320px;
@@ -2199,21 +2186,23 @@ font-size: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
+
     .submit:hover {
         background-color: #8e863e;
     }
 
-    .footer{
+    .footer {
         width: 85vw;
     }
-.audio-container {
-    padding-left: 30px;
-}
+
+    .audio-container {
+        padding-left: 30px;
+    }
 
 }
 
 @media all and (min-width: 428px) and (max-width: 770px) {
-    header{
+    header {
         padding-top: 0px;
         padding-bottom: 0px;
         justify-content: center;
@@ -2223,7 +2212,7 @@ font-size: 20px;
         background-color: rgba(128, 128, 128, 0.83);
     }
 
-    #signature{
+    #signature {
 
         display: none;
     }
@@ -2244,7 +2233,7 @@ font-size: 20px;
     }
 
     nav li {
-        right:0px;
+        right: 0px;
         margin-left: 0px;
     }
 
@@ -2256,11 +2245,12 @@ font-size: 20px;
 
     .about {
         padding-top: 50px;
-        padding-bottom:0px;
+        padding-bottom: 0px;
         height: 400px;
         width: 252vw;
 
     }
+
     .about-image {
 
         display: none;
@@ -2293,8 +2283,7 @@ font-size: 20px;
 
 
     /********* about **************/
-
-    .about-me-container{
+    .about-me-container {
         position: relative;
         height: 450px;
         width: 263vw;
@@ -2338,14 +2327,12 @@ font-size: 20px;
         left: 480px;
     }
 
-    .cybee{
+    .cybee {
         margin-left: -4000px;
     }
 
     /********* services **************/
-
-
-    .service-heading{
+    .service-heading {
         font-size: 20px;
         text-align: justify;
         padding-left: 330px;
@@ -2366,7 +2353,7 @@ font-size: 20px;
     }
 
 
-    .sec-box{
+    .sec-box {
         display: none;
         position: relative;
         z-index: 2;
@@ -2385,11 +2372,13 @@ font-size: 20px;
     .assignment-button-container {
         display: none;
     }
-    .projects{
+
+    .projects {
         background-color: #444654;
         height: 1640px;
     }
-    .project-heading{
+
+    .project-heading {
         font-size: 20px;
         width: 229vw;
         text-align: justify;
@@ -2421,13 +2410,11 @@ font-size: 20px;
 
     .project-grid {
         top: 70px;
-        padding-left:70px;
+        padding-left: 70px;
 
     }
 
     /********* gallery **************/
-
-
     .gallery-sec {
 
         background-color: #444654;
@@ -2435,7 +2422,7 @@ font-size: 20px;
     }
 
 
-    .gallery-heading{
+    .gallery-heading {
         font-size: 20px;
         width: 228vw;
         text-align: justify;
@@ -2488,7 +2475,6 @@ font-size: 20px;
     }
 
 
-
     /* Set up the grid container */
     .certificate-grid {
         top: 50px;
@@ -2520,17 +2506,13 @@ font-size: 20px;
     }
 
     /* ////////my-images//////////////*/
-
-    .my-images{
+    .my-images {
         margin-left: -4000px;
 
     }
 
 
-
     /********* contact-me **************/
-
-
     .contact-heading {
         font-size: 20px;
     }
@@ -2541,6 +2523,7 @@ font-size: 20px;
         font-family: Arial, sans-serif;
         overflow-x: hidden;
     }
+
     form {
         left: -10px;
         position: relative;
@@ -2549,19 +2532,22 @@ font-size: 20px;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         padding: 30px;
-        width:500px;
+        width: 500px;
         /* margin-left: 10px;
          margin-right: 10px;*/
         /*  margin: 50px auto;*/
     }
+
     h2 {
         margin-top: 0;
     }
+
     label {
         display: block;
         font-weight: bold;
         margin-bottom: 5px;
     }
+
     input, textarea {
         display: block;
         width: 100%;
@@ -2574,10 +2560,12 @@ font-size: 20px;
         color: #555;
         box-shadow: 0 0 5px rgba(130, 108, 46, 0.2);
     }
+
     input:focus, textarea:focus {
         outline: none;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     }
+
     .submit {
 
         width: 520px;
@@ -2590,15 +2578,17 @@ font-size: 20px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
+
     .submit:hover {
         background-color: #8e863e;
     }
 
-    .footer{
+    .footer {
         width: 95vw;
     }
+
     .audio-container {
-position: relative;
+        position: relative;
         left: 200px;
     }
 
@@ -2607,65 +2597,67 @@ position: relative;
 
 @media all and (min-width: 771px) and (max-width: 1025px) {
 
-header {
-    padding-left: 0px;
-    margin-left: 0px;
-}
+    header {
+        padding-left: 0px;
+        margin-left: 0px;
+    }
 
     .about-info {
         position: relative;
         right: 10px;
     }
-.about-image {
-position: relative;
-    left: 30px;
-}
+
+    .about-image {
+        position: relative;
+        left: 30px;
+    }
 
     .about-me-button {
         position: relative;
-      margin-left: -130px;
+        margin-left: -130px;
     }
 
- .cybee {
-     position: relative;
- margin-left: -130px;
- }
+    .cybee {
+        position: relative;
+        margin-left: -130px;
+    }
 
-.project-grid {
-    padding-left: 0px;
-    margin-right: 10px;
-}
+    .project-grid {
+        padding-left: 0px;
+        margin-right: 10px;
+    }
 
-.project-photo {
-    margin: 0.2rem;
-}
+    .project-photo {
+        margin: 0.2rem;
+    }
 
-.certificate {
-    margin-left: -15px;
-}
+    .certificate {
+        margin-left: -15px;
+    }
 
-.certificate-grid {
-    position: relative;
-    left: 0px;
-/*padding-left: 100px;*/
-}
+    .certificate-grid {
+        position: relative;
+        left: 0px;
+        /*padding-left: 100px;*/
+    }
 
-.my-images {
-    position: relative;
- padding-left: 0px;
-}
+    .my-images {
+        position: relative;
+        padding-left: 0px;
+    }
 
-.footer {
-    width: 93vw;
-}
+    .footer {
+        width: 93vw;
+    }
 }
 
 @media all and (min-width: 1026px) and (max-width: 1480px) {
 
 
-.button {
-    display: block;
-}
+    .button {
+        display: block;
+    }
+
     .assignment-button-container {
         display: flex;
 
