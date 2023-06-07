@@ -20,7 +20,7 @@
 
 <section id="btncontainer">
 
-    <button id="btnStart">Start
+    <button id="btnStart">  Wanna Re Start with audio :) ?
        <!-- <audio controls autoplay>
             <source src="audio/knight-rider-ringtone.mp3" type="audio/mp3">
 
@@ -29,13 +29,15 @@
     <button id="btnEnd">Stop</button>
 </section>
 
-<div class="audio-container">
-    <audio controls autoplay>
-        <source src="audio/knight-rider-ringtone.mp3" type="audio/mp3">
+   <!-- <audio controls autoplay>
+        <source src="audio/knight-rider-ringtone.mp3" type="audio/mp3" loop >
 
     </audio>
+-->
 
-</div>
+<audio id="audio" src="audio/knight-rider-ringtone.mp3" loop></audio>
+
+
 
 
 <script src="js/jquery-3.6.1.min.js"></script>
@@ -80,14 +82,36 @@
 
     var id=setInterval(renderDivs, 60);
 
-
+    var audio = $('#audio')[0];
     $("#btnStart").click(function (){
+
         clearInterval(id);
         id=setInterval(renderDivs, 60);
         console.log("ID when Start btn Called",id)
+        audio.play();
     });
 
+  /*  $(document).ready(function() {
+        // Get the audio element
+        var audio = $('#myAudio')[0];
+
+        // Play the audio
+        $('#playButton').click(function() {
+            audio.play();
+        });
+    });*/
+
+
+
+
+
+
+
+
+
+
     $("#btnEnd").click(function (){
+        audio.pause() ;
         clearInterval(id);
         console.log("ID when End Btn Called",id)
     });
