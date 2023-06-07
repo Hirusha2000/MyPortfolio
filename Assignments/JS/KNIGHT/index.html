@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>KNIGHT RIDER</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
 </head>
 <body>
 <h1> The Knight-Rider</h1>
@@ -35,12 +35,12 @@
     </audio>
 -->
 
-<audio id="audio" src="audio/knight-rider-ringtone.mp3" loop></audio>
+<audio id="audio" src="assets/audio/knight-rider-ringtone.mp3" loop></audio>
+<audio id="audio2" src="assets/audio/Scanner.mp3" loop></audio>
 
 
 
-
-<script src="js/jquery-3.6.1.min.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
     var knightRider = {
         count:0,
@@ -72,6 +72,44 @@
 
     renderDivs();
 
+
+    $(document).ready(function() {
+        var audioPlayer = $('#audioPlayer')[0];
+        var audioSources = ['audio1.mp3', 'audio2.mp3', 'audio3.mp3']; // Add more audio files here
+
+        var currentIndex = 0;
+
+        function playAudio() {
+            if (currentIndex < audioSources.length) {
+                audioPlayer.src = audioSources[currentIndex];
+                audioPlayer.play();
+                currentIndex++;
+            } else {
+                // All audio files have been played
+                currentIndex = 0; // Reset index to play from the beginning again
+            }
+        }
+
+
+
+        $("#btnStart").click(function (){
+
+            clearInterval(id);
+            id=setInterval(renderDivs, 60);
+            console.log("ID when Start btn Called",id)
+            playAudio();
+        });
+
+
+        // Event listener to play the next audio file once the current one has ended
+        audioPlayer.addEventListener('ended', function() {
+            playAudio();
+        });
+    });
+
+
+
+
     function renderDivs() {
         $('#container').empty();
         for (let i = 0; i < (knightRider.temArray.length) / 2; i++) {
@@ -83,12 +121,14 @@
     var id=setInterval(renderDivs, 60);
 
     var audio = $('#audio')[0];
+    var audio2=$('#audio2')[0];
     $("#btnStart").click(function (){
 
         clearInterval(id);
         id=setInterval(renderDivs, 60);
         console.log("ID when Start btn Called",id)
         audio.play();
+        audio2.play();
     });
 
   /*  $(document).ready(function() {
@@ -112,6 +152,7 @@
 
     $("#btnEnd").click(function (){
         audio.pause() ;
+        audio2.pause();
         clearInterval(id);
         console.log("ID when End Btn Called",id)
     });
