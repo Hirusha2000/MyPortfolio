@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap link -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Styles link -->
+    <link href="assets/dashboard.css" rel="stylesheet">
+
+    <!--Google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>  Web POS</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-light shadow-sm p-3 mb-5 bg-body rounded">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="assets/images/logo.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top">
+                Web<span class="text-danger">POS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a id="dashboard-btn" class="nav-link" href="#">Dashboard</a>
+                    <a id="order-btn" class="nav-link" href="#">Orders</a>
+                    <a id="item-btn" class="nav-link" href="#">Items</a>
+                    <a id="customer-btn" class="nav-link" href="#">Customers</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!--Dashboard content-->
+    <div class="container text-center dashboard">
+        <div class="row gap-2 p-2">
+            <div class="col">
+                <div class="p-3 content">
+                    <img class="content-img" src="assets/images/profit.png">
+                    <h3 class="div-title fw-semibold">Total Profit</h3>
+                    <h4 class="fw-bold content-text">77,541LKR</h4>
+                    <div class="border-bottom border-2 p-1"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3 content">
+                    <img class="content-img" src="assets/images/orders.png">
+                    <h3 class="div-title fw-semibold">Total Orders</h3>
+                    <h4 class="fw-bold content-text">21,375</h4>
+                    <div class="border-bottom border-2 p-1"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3 content">
+                    <img class="content-img" src="assets/images/tag.png">
+                    <h3 class="div-title fw-semibold">Total Discounts</h3>
+                    <h4 class="fw-bold content-text">12,000LKR</h4>
+                    <div class="border-bottom border-2 p-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row gap-2 p-2">
+            <div class="col col">
+                <div class="p-3 content">
+                    <img class="content-img" src="assets/images/employees.png">
+                    <h3 class="div-title fw-semibold">Total Employees</h3>
+                    <h4 class="fw-bold content-text">570</h4>
+                    <div class="border-bottom border-2 p-1"></div>
+                </div>
+            </div>
+            <div class="col col">
+                <div class="p-3 content">
+                    <img class="content-img" src="assets/images/item.png">
+                    <h3 class="div-title fw-semibold">Total Items</h3>
+                    <h4 class="fw-bold content-text">251,625</h4>
+                    <div class="border-bottom border-2 p-1"></div>
+                </div>
+            </div>
+            <div class="col col">
+                <div class="p-3 content">
+                    <img class="content-img" src="assets/images/employees.png">
+                    <h3 class="div-title fw-semibold">New Customers</h3>
+                    <h4 class="fw-bold content-text">256</h4>
+                    <div class="border-bottom border-2 p-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Order Content-->
+    <div class="container-fluid position-relative order" style="top: -52px; display: none">
+        <div class="page-title p-3">
+            <img src="assets/images/orders.png" alt="orders" width="32" height="32" class="d-inline-block">
+            <h1 class="d-inline-block fw-bold fs-3 m-0 position-relative" style="top: 8px;">Orders</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid position-relative order" style="bottom: 35px; display: none">
+        <div class="row">
+            <div class="col-lg-4 mt-2">
+                <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
+                    <div class="card-header bg-warning fw-bold" style="border: none; border-top-left-radius: 12px; border-top-right-radius: 12px;">Invoice Details </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <label>Order ID</label>
+                                        <input class="form-control" id="orderID" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <label>Order Date</label>
+                                        <input class="form-control" id="currentOrderDate" type="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-2">
+                                <div class="col-6">
+                                    <div>
+                                        <label>Customer ID</label>
+                                        <select class="form-select" id="orderCusOpt">
+                                            <option>Customer ID's</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <label>Name</label>
+                                        <input class="form-control" id="orderCusName" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-12 pt-2">
+                                    <div>
+                                        <label>Salary</label>
+                                        <input class="form-control" id="orderSalary" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-12 pt-2">
+                                    <div>
+                                        <label>Address</label>
+                                        <input class="form-control" id="orderAddress" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-2">
+                <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
+                    <div class="card-header bg-warning fw-bold" style="border: none; border-top-left-radius: 12px; border-top-right-radius: 12px;">Item Select</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <label>Item Code</label>
+                                        <select id="orderItemOpt" class="form-select" aria-label="Default select example"></select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <label>Item Name</label>
+                                        <input class="form-control" id="orderItemName" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-2">
+                                <div class="col-6">
+                                    <div>
+                                        <label>Unit Price</label>
+                                        <input class="form-control" id="orderUPrice" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <label>Qty. on Hand</label>
+                                        <input class="form-control" id="orderQtyOnHand" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-12 pt-2">
+                                    <div>
+                                        <label>Order Quantity</label>
+                                        <input class="form-control" id="orderQty" min="1" type="number">
+                                    </div>
+                                </div>
+                                <div class="col-12" style="padding-top: 32px;">
+                                    <button id="addItemBtn" type="button" class="btn btn-warning w-100">Add Item</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-2">
+                <section class="other-detail-section p-4" style="border-radius: 12px; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;">
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="txt-total fw-normal fs-4">Total</span>
+                        </div>
+                        <div class="col-6 text-end">
+                            <span id="total" class="txt-total fw-normal fs-4">5000LKR</span>
+                        </div>
+                        <div class="col-12 border w-100 mt-2"></div>
+                        <div class="col-6 pt-2">
+                            <span class="txt-total fw-normal fs-4">Subtotal</span>
+                        </div>
+                        <div class="col-6 text-end pt-2">
+                            <span id="subTot" class="txt-total fw-normal fs-4">450LKR</span>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-6">
+                            <div>
+                                <label>Cash</label>
+                                <input id="cash" class="form-control" id="cash" type="text">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <label>Discount</label>
+                                <input id="discount" class="form-control" id="discount" min="0" type="number">
+                            </div>
+                        </div>
+                        <div class="col-12 pt-2">
+                            <div>
+                                <label>Balance</label>
+                                <input id="balance" class="form-control" id="balance" type="text">
+                            </div>
+                        </div>
+                        <div class="col-12" style="padding-top: 30px;">
+                            <button id="placeOrder" class="btn btn-danger w-100">Purchase</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--order table-->
+        <div class="col-md-12 mt-4" style="overflow-y: scroll; height: 164px">
+            <table class="table table-hover">
+                <thead class="table-warning">
+                <th scope="col">Order ID</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+                </thead>
+                <tbody id="tblOrder"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Item content -->
+    <div class="container-fluid position-relative item" style="top: -52px; display: none">
+        <div class="page-title p-3">
+            <img src="assets/images/item.png" alt="items" width="32" height="32" class="d-inline-block">
+            <h1 class="d-inline-block fw-bold fs-3 m-0 position-relative" style="top: 8px;">Item</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid position-relative item" style="bottom: 35px; display: none">
+        <div class="row">
+            <div class="col-lg-6 mt-3">
+                <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
+                    <div class="card-header bg-warning fw-bold" style="border: none; border-top-left-radius: 12px; border-top-right-radius: 12px;">Add New Item</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Item Code</label>
+                                        <input class="form-control" id="itemCode" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Item Name</label>
+                                        <input class="form-control" id="itemName" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Quantity</label>
+                                        <input class="form-control" id="quantity" min="1" type="number">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Item Price</label>
+                                        <input class="form-control" id="itemPrice" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 pt-4">
+                                    <button type="button" class="btn btn-warning w-100" id="saveItem">Save Item</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mg-lg-0 mt-3">
+                <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
+                    <div class="card-header bg-warning fw-bold" style="border: none; border-top-left-radius: 12px; border-top-right-radius: 12px;">Renew | Delete | Search Item</div>
+                    <div class="card-body">
+                        <form>
+                            <!--Search-->
+                            <div class="row">
+                                <div class="col-6">
+                                    <input id="updateItemSearch" class="form-control mr-sm-2" type="search" placeholder="Search by Item Code" aria-label="Search">
+                                </div>
+                                <div class="col-3">
+                                    <select id="selectCodeForUpdate" class="form-select" aria-label="Default select example"></select>
+                                </div>
+                                <div class="col-3">
+                                    <button id="updateItemSearchBtn" type="button" class="btn btn-warning w-100">Search</button>
+                                </div>
+                            </div>
+                            <!--Search end-->
+                            <div class="row pt-4">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Item Code</label>
+                                        <input class="form-control" id="update-itemCode" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Item Name</label>
+                                        <input class="form-control" id="update-itemName" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Quantity</label>
+                                        <input class="form-control" id="update-quantity" min="1" type="number">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Item Price</label>
+                                        <input class="form-control" id="update-itemPrice" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-6">
+                                    <button id="itemUpdate" type="button" class="btn btn-warning w-100">Update Item</button>
+                                </div>
+                                <div class="col-6">
+                                    <button id="itemDelete" type="button" class="btn btn-danger w-100">Delete Item</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Item table-->
+        <div class="col-md-12 mt-4" style="overflow-y: scroll; height: 164px">
+            <table class="table table-hover">
+                <thead class="table-warning">
+                <th scope="col">Item Code</th>
+                <th scope="col">Name</th>
+                <th scope="col">Quantity On Hand</th>
+                <th scope="col">Price</th>
+                </thead>
+                <tbody id="tblItems"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Customer content -->
+    <div class="container-fluid position-relative customer" style="top: -52px; display: none">
+        <div class="page-title p-3">
+            <img src="assets/images/consumer%20(1).png" alt="customer" width="32" height="32" class="d-inline-block">
+            <h1 class="d-inline-block fw-bold fs-3 m-0 position-relative" style="top: 8px;">Customer</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid position-relative customer" style="bottom: 35px; display: none">
+        <div class="row">
+            <div class="col-lg-6 mt-3">
+                <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
+                    <div class="card-header bg-warning fw-bold" style="border: none; border-top-left-radius: 12px; border-top-right-radius: 12px;">Add New Customer</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Customer ID</label>
+                                        <input class="form-control" id="cusId" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input class="form-control" id="cusName" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Salary</label>
+                                        <input class="form-control" id="salary" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input class="form-control" id="address" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 pt-4">
+                                    <button id="saveCustomer" type="button" class="btn btn-warning w-100">Save Customer</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mg-lg-0 mt-3">
+                <div class="card" style="border: none; box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px; border-radius: 12px;">
+                    <div class="card-header bg-warning fw-bold" style="border: none; border-top-left-radius: 12px; border-top-right-radius: 12px;">Renew | Delete | Search Customer</div>
+                    <div class="card-body">
+                        <form>
+                            <!--Search-->
+                            <div class="row">
+                                <div class="col-6">
+                                    <input id="customerSearch" class="form-control mr-sm-2" type="search" placeholder="Search Customer from ID" aria-label="Search">
+                                </div>
+                                <div class="col-3">
+                                    <select id="selectCustomerName" class="form-select" aria-label="Default select example">
+                                        <option selected>Select ID</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <button id="customerSearchBtn" type="button" class="btn btn-warning w-100">Search</button>
+                                </div>
+                            </div>
+                            <!--Search end-->
+                            <div class="row pt-4">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Customer ID</label>
+                                        <input class="form-control" id="update-cusId" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input class="form-control" id="update-cusName" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Salary</label>
+                                        <input class="form-control" id="update-salary" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input class="form-control" id="update-address" type="text">
+                                        <span class="control-error text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-6">
+                                    <button id="updateCustomer" type="button" class="btn btn-warning w-100">Update Customer</button>
+                                </div>
+                                <div class="col-6">
+                                    <button id="deleteCustomer" type="button" class="btn btn-danger w-100">Delete Customer</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Customer table-->
+        <div class="col-md-12 mt-4" style="overflow-y: scroll; height: 164px;">
+            <table class="table table-hover">
+                <thead class="table-warning">
+                <th scope="col">Customer ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Address</th>
+                </thead>
+                <tbody id="tblCustomer"></tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<!-- import js for bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- import jquery -->
+<script src="assets/jquery-3.6.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.all.min.js"></script>
+
+<!-- import db js -->
+<script src="db/db.js"></script>
+
+<!-- import models -->
+<script src="model/Item.js"></script>
+<script src="model/Customer.js"></script>
+<script src="model/Order.js"></script>
+<script src="model/Cart.js"></script>
+<script src="model/OrderDetail.js"></script>
+
+
+
+<!-- import Index controller js -->
+<script src="controller/IndexController.js"></script>
+
+<!-- import Customer controller js -->
+<script src="controller/CustomerController.js"></script>
+
+<!-- import Item controller js -->
+<script src="controller/ItemController.js"></script>
+
+<!-- import Order controller js -->
+<script src="controller/OrderController.js"></script>
+</body>
+</html>
