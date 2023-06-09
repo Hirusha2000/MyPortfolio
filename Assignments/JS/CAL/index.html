@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Normalize CSS File -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <title>Calculator</title>
+</head>
+<body>
+<div class="calculator">
+    <div class="display">
+        <input type="text" id="input" disabled>
+    </div>
+    <div class="button">
+        <!-- Full erase -->
+        <input type="button" value="AC" id="clear">
+
+        <!-- Single erase -->
+        <input type="button" value="DEL" id="del">
+
+        <input type="button" value="/" id="div" class="input-btn">
+        <input type="button" value="*" id="mul" class="input-btn">
+        <input type="button" value="7" id="sev" class="input-btn">
+        <input type="button" value="8" id="eight" class="input-btn">
+        <input type="button" value="9" id="nine" class="input-btn">
+        <input type="button" value="-" id="minus" class="input-btn">
+        <input type="button" value="6" id="six" class="input-btn">
+        <input type="button" value="5" id="fiv" class="input-btn">
+        <input type="button" value="4" id="four" class="input-btn">
+        <input type="button" value="+" id="plu" class="input-btn">
+
+        <input type="button" value="1" id="one" class="input-btn">
+        <input type="button" value="2" id="two" class="input-btn">
+        <input type="button" value="3" id="thr" class="input-btn">
+
+        <input type="button" value="=" id="equal">
+        <input type="button" value="0" id="zer" class="input-btn">
+        <input type="button" value="." id="dot" class="input-btn">
+    </div>
+</div>
+
+<!-- Import jquery -->
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+
+$("#one").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('1');
+    } else {
+        $("#input").val(output + '1');
+    }
+});
+
+$("#two").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('2');
+    } else {
+        $("#input").val(output + '2');
+    }
+});
+
+$("#thr").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('3');
+    } else {
+        $("#input").val(output + '3');
+    }
+});
+
+$("#four").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('4');
+    } else {
+        $("#input").val(output + '4');
+    }
+});
+
+$("#fiv").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('5');
+    } else {
+        $("#input").val(output + '5');
+    }
+});
+
+$("#six").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('6');
+    } else {
+        $("#input").val(output + '6');
+    }
+});
+
+$("#sev").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('7');
+    } else {
+        $("#input").val(output + '7');
+    }
+});
+
+$("#eight").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('8');
+    } else {
+        $("#input").val(output + '8');
+    }
+});
+
+$("#nine").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('9');
+    } else {
+        $("#input").val(output + '9');
+    }
+});
+
+$("#zer").click(function () {
+    let output = $("#input").val();
+
+    if(output === 0){
+        $("#input").val('0');
+    } else {
+        $("#input").val(output + '0');
+    }
+});
+
+$("#dot").click(function () {
+    let output = $("#input").val();
+
+    $("#input").val(output + '.');
+});
+
+/* Operators */
+var calculation = {
+    fValue: "",
+    sValue: "",
+    operator: ""
+}
+
+$("#div").click(function () {
+    let output = $("#input").val();
+
+ calculation.fValue = output;
+ calculation.operator = "/";
+
+    $("#input").val('');
+});
+
+$("#plu").click(function () {
+    let output = $("#input").val();
+
+ calculation.fValue = output;
+ calculation.operator = "+";
+
+    $("#input").val('');
+});
+
+$("#minus").click(function () {
+    let output = $("#input").val();
+
+ calculation.fValue = output;
+ calculation.operator = "-";
+
+    $("#input").val('');
+});
+
+$("#mul").click(function () {
+    let output = $("#input").val();
+
+ calculation.fValue = output;
+ calculation.operator = "*";
+
+    $("#input").val('');
+});
+
+/* Final outPut */
+function evaluate() {
+    let getCalculation = null;
+
+    if(calculation.operator === '/') {
+        var fNum = parseFloat(calculation.fValue);
+        var sNum = parseFloat(calculation.sValue);
+
+        getCalculation = fNum / sNum;
+        $("#input").val(getCalculation);
+    }
+
+    if(calculation.operator === '+') {
+        var fNum = parseFloat(calculation.fValue);
+        var sNum = parseFloat(calculation.sValue);
+
+        getCalculation = fNum + sNum;
+        $("#input").val(getCalculation);
+    }
+
+    if(calculation.operator === '-') {
+        var fNum = parseFloat(calculation.fValue);
+        var sNum = parseFloat(calculation.sValue);
+
+        getCalculation = fNum - sNum;
+        $("#input").val(getCalculation);
+    }
+
+    if(calculation.operator === '*') {
+        var fNum = parseFloat(calculation.fValue);
+        var sNum = parseFloat(calculation.sValue);
+
+        getCalculation = fNum * sNum;
+        $("#input").val(getCalculation);
+    }
+}
+
+$("#equal").click(function () {
+    let output = $("#input").val();
+
+    calculation.sValue = output;
+
+    evaluate();
+});
+
+$("#del").click(function () {
+    let output = $("#input").val();
+    document.getElementById("input").value = output.substr(0, output.length - 1);
+});
+
+$("#clear").click(function () {
+    $("#input").val('');
+});
+</script>
+</body>
+</html>
