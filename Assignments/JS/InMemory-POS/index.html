@@ -595,10 +595,14 @@
                         </tr>`;
 
             $("#tblCustomer").append(row);
+            bindEventsCustomer();
+            DeleteCustomer();
+
         }
     });
 
-    /*document.getElementById("saveCustomer").addEventListener("click", function () {
+</script>
+  <!--  /*document.getElementById("saveCustomer").addEventListener("click", function () {
 
         //get typed values of input fields
         let id = document.getElementById("customer-id").value;
@@ -636,9 +640,89 @@
         //set the row to the table body
         tBody.appendChild(tr);
     });*/
+-->
+
+
+
+
+
+<!--<script>
+    var table = document.getElementById("tblCustomer");
+    var rows = table.getElementsByTagName("tr");
+
+    for (var i = 0; i < rows.length; i++) {
+        rows[i].addEventListener("click", function() {
+            // Function to handle the row click event
+            selectRow(this);
+        });
+    }
+
+    function selectRow(row) {
+        // Access the row's value or cells and perform desired operations
+        var cells = row.getElementsByTagName("td");
+        var value1 = cells[0].textContent;
+        var value2 = cells[1].textContent;
+        var value3 = cells[2].textContent;
+         var value4 = cells[3].textContent;
+
+        document.getElementById("update-cusId").value=value1;
+        document.getElementById("update-cusName").value=value2;
+        document.getElementById("update-salary").value=value3;
+        document.getElementById("update-address").value=value4;
+
+
+
+    }
+
+
+
+
+</script>-->
+
+
+<script>
+function bindEventsCustomer(){
+
+
+    $('#tblCustomer>tr').click (function(e){
+        console.log(this);
+
+        let id = $(this).children.eq(0).text();
+        let name= $(this).children.eq(1).text();
+        let address = $(this).children.eq(2).text();
+        let salary= $(this).children.eq(3).text();
+
+
+        $('#cusId').val(id);
+        $('#cusName').val(name);
+        $('#salary').val(address);
+        $('#address').val(salary);
+
+
+    });
+}
+
+
 </script>
 
 
+<!--delete relavent customers-->
+
+<script>
+
+    function DeleteCustomer(){
+
+        for ( let i=0;i<customerDB.length;i++){
+            if (customerDB[i].id==id){
+                customerDB.splice(i,1);
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+</script>
 <script>
 
 
@@ -684,6 +768,7 @@
                         </tr>`;
 
             $("#tblItems").append(row);
+            bindEventsItems();
         }
     });
     /*document.getElementById("saveItem").addEventListener("click", function () {
@@ -728,11 +813,37 @@
 
 </script>
 
-
-
-
-
+<!--//select the relavant Item rows-->
 <script>
+    function bindEventsItems(){
+
+
+        $('#tblItems>tr').click(function(e){
+            console.log(this);
+
+            let icode = $(this).children.eq(0).text();
+            let iname= $(this).children.eq(1).text();
+            let iqty = $(this).children.eq(2).text();
+            let iprice= $(this).children.eq(3).text();
+
+
+            $('#itemCode').val(icode);
+            $('#itemName').val(iname);
+            $('#quantity').val(iqty);
+            $('#itemPrice').val(iprice);
+
+
+        });
+    }
+
+</script>
+
+
+
+
+
+
+<!--<script>
     $("#addItemBtn").click(function () {
 
         let orderId = $("#itemCode").val();
@@ -747,7 +858,10 @@
         $("#tblOrder").append(tbody);
 
     });
-    /*document.getElementById("addToCart").addEventListener("click", function () {
+
+
+</script>-->
+    <!--/*document.getElementById("addToCart").addEventListener("click", function () {
 
         //get typed values of input fields
         let code = document.getElementById("itemCode").value;
@@ -791,9 +905,9 @@
     });*/
 
 
+-->
 
 
-</script>
 
 <!-- import db js -->
 <script src="db/db.js"></script>

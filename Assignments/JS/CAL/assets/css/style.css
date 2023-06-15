@@ -11,7 +11,7 @@ body {
 }
 
 .calculator {
-    width: 400px;
+    width: 600px;
     background-color: #ffffff;
     padding: 50px 30px;
     position: absolute;
@@ -19,7 +19,7 @@ body {
     top: 50%;
     left: 50%;
     border-radius: 8px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.56) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
 }
 
 .display {
@@ -63,7 +63,7 @@ body {
 
 input[type="button"]#equal {
     grid-row: span 2;
-    background-color: #a342ff;
+    background-color: #3d5999;
 }
 
 input[type="button"][value="0"] {
