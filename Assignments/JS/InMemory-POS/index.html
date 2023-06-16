@@ -546,6 +546,35 @@
 
 
 
+<!-- import db js -->
+<script src="db/db.js"></script>
+
+<!-- import models -->
+<script src="model/Item.js"></script>
+<script src="model/Customer.js"></script>
+<script src="model/Order.js"></script>
+<script src="model/Cart.js"></script>
+<script src="model/OrderDetail.js"></script>
+
+
+
+<!-- import Index controller js -->
+<script src="controller/IndexController.js"></script>
+
+<!-- import Customer controller js -->
+<script src="controller/CustomerController.js"></script>
+
+<!-- import Item controller js -->
+<script src="controller/ItemController.js"></script>
+
+<!-- import Order controller js -->
+<script src="controller/OrderController.js"></script>
+
+
+
+
+
+
 <script>
     var customerDB=[];
     $("#saveCustomer").click(function () {
@@ -601,45 +630,57 @@
         }
     });
 
+
+
+
 </script>
-  <!--  /*document.getElementById("saveCustomer").addEventListener("click", function () {
 
-        //get typed values of input fields
-        let id = document.getElementById("customer-id").value;
-        let name = document.getElementById("customer-name").value;
-        let address = document.getElementById("customer-address").value;
-        let salary = document.getElementById("customer-salary").value;
+<script>
 
-        //let's print it
-        console.log(id,name,address,salary);
+    function ClearCustomerInputDetails(){
 
-        //catch the table body
-        let tBody=document.getElementById("tblCustomer");
 
-        //ok then, let's create the above row
-        let tr= document.createElement("tr");
+    }
 
-        //let's create another four columns
-        let col1= document.createElement("td");
-        let col2= document.createElement("td");
-        let col3= document.createElement("td");
-        let col4= document.createElement("td");
+</script>
+<!--  /*document.getElementById("saveCustomer").addEventListener("click", function () {
 
-        //set input fields values to the above created columns
-        col1.textContent=id;
-        col2.textContent=name;
-        col3.textContent=address;
-        col4.textContent=salary;
+      //get typed values of input fields
+      let id = document.getElementById("customer-id").value;
+      let name = document.getElementById("customer-name").value;
+      let address = document.getElementById("customer-address").value;
+      let salary = document.getElementById("customer-salary").value;
 
-        //set 4 columns to the previously created row
-        tr.appendChild(col1);
-        tr.appendChild(col2);
-        tr.appendChild(col3);
-        tr.appendChild(col4);
+      //let's print it
+      console.log(id,name,address,salary);
 
-        //set the row to the table body
-        tBody.appendChild(tr);
-    });*/
+      //catch the table body
+      let tBody=document.getElementById("tblCustomer");
+
+      //ok then, let's create the above row
+      let tr= document.createElement("tr");
+
+      //let's create another four columns
+      let col1= document.createElement("td");
+      let col2= document.createElement("td");
+      let col3= document.createElement("td");
+      let col4= document.createElement("td");
+
+      //set input fields values to the above created columns
+      col1.textContent=id;
+      col2.textContent=name;
+      col3.textContent=address;
+      col4.textContent=salary;
+
+      //set 4 columns to the previously created row
+      tr.appendChild(col1);
+      tr.appendChild(col2);
+      tr.appendChild(col3);
+      tr.appendChild(col4);
+
+      //set the row to the table body
+      tBody.appendChild(tr);
+  });*/
 -->
 
 
@@ -681,26 +722,26 @@
 
 
 <script>
-function bindEventsCustomer(){
+    function bindEventsCustomer(){
 
 
-    $('#tblCustomer>tr').click (function(e){
-        console.log(this);
+        $('#tblCustomer>tr').click (function(e){
+            console.log(this);
 
-        let id = $(this).children.eq(0).text();
-        let name= $(this).children.eq(1).text();
-        let address = $(this).children.eq(2).text();
-        let salary= $(this).children.eq(3).text();
-
-
-        $('#cusId').val(id);
-        $('#cusName').val(name);
-        $('#salary').val(address);
-        $('#address').val(salary);
+            let id = $(this).children.eq(0).text();
+            let name= $(this).children.eq(1).text();
+            let address = $(this).children.eq(2).text();
+            let salary= $(this).children.eq(3).text();
 
 
-    });
-}
+            $('#cusId').val(id);
+            $('#cusName').val(name);
+            $('#salary').val(address);
+            $('#address').val(salary);
+
+
+        });
+    }
 
 
 </script>
@@ -723,6 +764,39 @@ function bindEventsCustomer(){
     }
 
 </script>
+
+<!--Update customers-->
+
+<script>
+
+
+
+   /* customerDB.find(function (v){
+       return v.id=="coo3";
+    });
+
+    me condition eka true unoth object eka return wenawa.
+    call back function kiyala mewata kiyanawa
+
+    */
+
+   function  searchCustomer(id){
+     return  customerDB.find(function (customer){
+           return customer.id==id;
+
+       })
+   }
+
+
+   function updateCustomer(id){
+       if (searchCustomer(id)==undefined){
+           alert("No such customer")
+       }
+
+   }
+
+</script>
+
 <script>
 
 
@@ -861,76 +935,56 @@ function bindEventsCustomer(){
 
 
 </script>-->
-    <!--/*document.getElementById("addToCart").addEventListener("click", function () {
+<!--/*document.getElementById("addToCart").addEventListener("click", function () {
 
-        //get typed values of input fields
-        let code = document.getElementById("itemCode").value;
-        let productName = document.getElementById("item_Name").value;
-        let price = document.getElementById("unitPrice").value;
-        let qty = document.getElementById("orderedQty").value;
-        let tot = document.getElementById("total").value;
+    //get typed values of input fields
+    let code = document.getElementById("itemCode").value;
+    let productName = document.getElementById("item_Name").value;
+    let price = document.getElementById("unitPrice").value;
+    let qty = document.getElementById("orderedQty").value;
+    let tot = document.getElementById("total").value;
 
-        //let's print it
-        console.log(code,productName,price,qty,tot);
+    //let's print it
+    console.log(code,productName,price,qty,tot);
 
-        //catch the table body
-        let tBody=document.getElementById("tblPlaceOrder");
+    //catch the table body
+    let tBody=document.getElementById("tblPlaceOrder");
 
-        //ok then, let's create the above row
-        let tr= document.createElement("tr");
+    //ok then, let's create the above row
+    let tr= document.createElement("tr");
 
-        //let's create another four columns
-        let col1= document.createElement("td");
-        let col2= document.createElement("td");
-        let col3= document.createElement("td");
-        let col4= document.createElement("td");
-        let col5= document.createElement("td");
+    //let's create another four columns
+    let col1= document.createElement("td");
+    let col2= document.createElement("td");
+    let col3= document.createElement("td");
+    let col4= document.createElement("td");
+    let col5= document.createElement("td");
 
-        //set input fields values to the above created columns
-        col1.textContent=code;
-        col2.textContent=productName;
-        col3.textContent=price;
-        col4.textContent=qty;
-        col5.textContent=tot;
+    //set input fields values to the above created columns
+    col1.textContent=code;
+    col2.textContent=productName;
+    col3.textContent=price;
+    col4.textContent=qty;
+    col5.textContent=tot;
 
-        //set 4 columns to the previously created row
-        tr.appendChild(col1);
-        tr.appendChild(col2);
-        tr.appendChild(col3);
-        tr.appendChild(col4);
-        tr.appendChild(col5);
+    //set 4 columns to the previously created row
+    tr.appendChild(col1);
+    tr.appendChild(col2);
+    tr.appendChild(col3);
+    tr.appendChild(col4);
+    tr.appendChild(col5);
 
-        //set the row to the table body
-        tBody.appendChild(tr);
-    });*/
+    //set the row to the table body
+    tBody.appendChild(tr);
+});*/
 
 
 -->
 
 
 
-<!-- import db js -->
-<script src="db/db.js"></script>
-
-<!-- import models -->
-<script src="model/Item.js"></script>
-<script src="model/Customer.js"></script>
-<script src="model/Order.js"></script>
-<script src="model/Cart.js"></script>
-<script src="model/OrderDetail.js"></script>
 
 
 
-<!-- import Index controller js -->
-<script src="controller/IndexController.js"></script>
-
-<!-- import Customer controller js -->
-<script src="controller/CustomerController.js"></script>
-
-<!-- import Item controller js -->
-<script src="controller/ItemController.js"></script>
-
-<!-- import Order controller js -->
-<script src="controller/OrderController.js"></script>
 </body>
 </html>
