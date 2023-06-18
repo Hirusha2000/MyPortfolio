@@ -22,9 +22,6 @@
 }
 
 
-body >h1:nth-child(1){
-    display: none;
-}
 * {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
