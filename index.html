@@ -37,11 +37,9 @@
 
 <body>
 
-<div class="loader-container">
-    <img src="assets/img/loader.gif" alt="Loading..." />
+<div id="loader">
+    <div></div>
 </div>
-
-
 
 <header>
     <img src="assets/img/signature.png" alt="signature" id="signature">
@@ -59,9 +57,6 @@
 
 
 <main>
-
-
-
 
     <section class="about">
         <div class="about-image">
@@ -357,17 +352,27 @@
 
 
 <script>
-    // Assuming you have an element with the class "loader-container"
-    const loaderContainer = document.querySelector('.loader-container');
+    let loader = document.getElementById("loader");
+    //this is it. this will execute after the window is fully loaded
+    window.addEventListener("load", function () {
+        console.log("This message will print just after fully loading the website")
 
-    // Function to stop the loader
-    function stopLoader() {
-        // Hide the loader container
-        loaderContainer.style.display = 'none';
-    }
+        //hide the loader
+        loader.style.display = 'none';
+    });
 
-    // Set a timeout to stop the loader after 3 seconds (adjust as needed)
-    setTimeout(stopLoader, 6000);
+
+    // in addition to that if you want to run a code as soon as the DOM created
+    document.addEventListener("DOMContentLoaded", function () {
+        // you can write anything you want here, and it will run just after creating the DOM object
+        let h1 = document.createElement("h1");
+        h1.textContent = "HI there";
+
+        let body=document.querySelector("body");
+        body.prepend(h1);
+    });
+
+
 
 </script>
 </body>
