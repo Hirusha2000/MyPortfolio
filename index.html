@@ -37,9 +37,10 @@
 
 <body>
 
-<div id="loader-container">
-    <div id="loader"></div>
+<div class="loader-container">
+    <img src="assets/img/loader.gif" alt="Loading..." />
 </div>
+
 
 
 <header>
@@ -356,10 +357,17 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Page loaded, hide the loader
-        document.getElementById("loader-container").style.display = "none";
-    });
+    // Assuming you have an element with the class "loader-container"
+    const loaderContainer = document.querySelector('.loader-container');
+
+    // Function to stop the loader
+    function stopLoader() {
+        // Hide the loader container
+        loaderContainer.style.display = 'none';
+    }
+
+    // Set a timeout to stop the loader after 3 seconds (adjust as needed)
+    setTimeout(stopLoader, 6000);
 
 </script>
 </body>
