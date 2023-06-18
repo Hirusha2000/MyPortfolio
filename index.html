@@ -37,6 +37,11 @@
 
 <body>
 
+<div id="loader-container">
+    <div id="loader"></div>
+</div>
+
+
 <header>
     <img src="assets/img/signature.png" alt="signature" id="signature">
     <nav>
@@ -53,6 +58,8 @@
 
 
 <main>
+
+
 
 
     <section class="about">
@@ -347,6 +354,14 @@
     </div>
 </footer>
 
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Page loaded, hide the loader
+        document.getElementById("loader-container").style.display = "none";
+    });
+
+</script>
 </body>
 
 </html>
