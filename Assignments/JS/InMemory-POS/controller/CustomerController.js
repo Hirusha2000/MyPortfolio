@@ -1,313 +1,165 @@
-$("#cusId").focus();
+$("#saveCustomer").attr('disabled', true);
 
 $("#saveCustomer").click(function () {
-    let customerId = $("#cusId").val();
-    let customerName = $("#cusName").val();
-    let customerAddress = $("#address").val();
-    let customerSalary = $("#salary").val();
+    let id = $("#customer-id").val();
+    if (searchCustomer(id.trim()) == undefined) {
+        let name = $("#customer-name").val();
+        let address = $("#customer-address").val();
+        let salary = $("#customer-salary").val();
 
-    let customerObject = Customer(customerId,customerName,customerSalary,customerAddress);
+        let newCustomer = Object.assign({}, customer);
+        newCustomer.id = id;
+        newCustomer.name = name;
+        newCustomer.address = address;
+        newCustomer.salary = salary;
 
-    customers.push(customerObject);
+        customerDB.push(newCustomer);
 
-    loadAllCustomers();
-    bindCusRowClick();
-    loadAllCustomerForOption();
-    loadAllCusForOrderOpt();
-    clearCusTexts();
+        alert("Customer saved successfully.!");
+
+        clearSaveFormFields();
+        getAllCustomers();
+
+    } else {
+        alert("Customer already exits.!");
+        clearSaveFormFields();
+    }
+
 });
 
-function loadAllCustomers() {
-    $("#tblCustomer").empty();
-
-    for (var customer of customers) {
-        console.log(customer);
-
-        var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.salary}</td><td>${customer.address}</td></tr>`
-
-        $("#tblCustomer").append(row);
-    }
+function clearSaveFormFields() {
+    $("#customer-id,#customer-name,#customer-address,#customer-salary").val("");
+    $("#customer-id").focus();
 }
 
-function bindCusRowClick() {
-    $("#tblCustomer>tr").click(function () {
-       let id = $(this).children(":eq(0)").text();
-       let name = $(this).children(":eq(1)").text();
-       let salary = $(this).children(":eq(2)").text();
-       let address = $(this).children(":eq(3)").text();
+$("#getAllCustomers").click(function () {
+    getAllCustomers();
+});
 
-        $('#update-cusId').val(id);
-        $('#update-cusName').val(name);
-        $('#update-salary').val(salary);
-        $('#update-address').val(address);
+function getAllCustomers() {
+    $("#tblCustomer").empty();
+
+    for (let i = 0; i < customerDB.length; i++) {
+        let id = customerDB[i].id;
+        let name = customerDB[i].name;
+        let address = customerDB[i].address;
+        let salary = customerDB[i].salary;
+
+        let row = `<tr>
+                        <td>${id}</td>
+                        <td>${name}</td>
+                        <td>${address}</td>
+                        <td>${salary}</td>
+                        </tr>`;
+
+        $("#tblCustomer").append(row);
+        bindCustomerTrEvents();
+    }
+
+}
+
+function bindCustomerTrEvents() {
+    $("#tblCustomer>tr").click(function (eData) {
+        $("#customerId").val($(this).children().eq(0).text());
+        $("#customerName").val($(this).children().eq(1).text());
+        $("#customerAddress").val($(this).children().eq(2).text());
+        $("#customerSalary").val($(this).children().eq(3).text());
     });
 }
 
-function loadAllCustomerForOption() {
-    $("#selectCustomerName").empty();
-    for (let customer of customers) {
-        $("#selectCustomerName").append(`<option>${customer.name}</option>`)
-    }
-}
-
-$('#customerSearchBtn').click(function () {
-   let id = $('#customerSearch').val();
-   let customer = searchCustomer(id);
-   if (customer != null) {
-       setCusTextField(customer.id,customer.name,customer.salary,customer.address);
-   } else {
-       Swal.fire({
-           icon: 'error',
-           title: 'Oops...',
-           text: 'There is no Customer available for that id: ' + id,
-       });
-   }
+$('#newCustomer').click(function (e) {
+    $("#customer-id").focus();
 });
+
+$('#updateCustomer').click(function (e) {
+    $("#customerId").focus();
+})
 
 $('#deleteCustomer').click(function () {
-   let deleteId = $('#update-cusId').val();
-   let cusOption = confirm("Do you really want to delete customer id: "+deleteId);
-   if (cusOption) {
-       if(customerDelete(deleteId)) {
-           Swal.fire('Customer Successfully Deleted..');
-           setCusTextField("","","","");
-       } else {
-           Swal.fire({
-               icon: 'error',
-               title: 'Oops...',
-               text: 'No such Customer to delete. please check the Id',
-           });
-       }
-   }
-});
+    let cus_id = $('#txtCusID').val();
 
-$('#updateCustomer').click(function () {
-    let updateId = $('#update-cusId').val();
-    let response = customerUpdate(updateId);
-    if(response){
-        Swal.fire('Customer updated Successfully');
-        setCusTextField("","","","")
-        clearCusUpdates();
-    } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Update Failed..!',
-        });
+    let consent = confirm("Do you want to delete.?");
+    if (consent) {
+        let response = deleteCustomer(cus_id);
+        if (response) {
+            alert("Customer Deleted");
+            getAllCustomers();
+        } else {
+            alert("Customer Not Removed..!");
+        }
     }
 });
 
-function customerDelete(deleteCusId){
-    let customer = searchCustomer(deleteCusId);
-    if(customer != null){
-        let cusIndexNo = customers.indexOf(customer);
-        customers.splice(cusIndexNo,1);
-        loadAllCustomers();
-        return true;
-    } else {
+function deleteCustomer(id) {
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].id == id) {
+            customerDB.splice(i, 1);
+            return true;
+        }
         return false;
     }
 }
 
-function customerUpdate(id){
-    let customer = searchCustomer(id);
-    if( customer != null){
-        customer.id = $('#update-cusId').val();
-        customer.name = $('#update-cusName').val();
-        customer.salary = $('#update-salary').val();
-        customer.address = $('#update-address').val();
-        loadAllCustomers();
-        bindCusRowClick();
-        return true;
+$('#updateCustomerBtn').click(function () {
+    let cus_id = $('#customerId').val();
+    updateCustomer(cus_id);
+});
+
+function clearUpdateFormFields() {
+    $("#customerId,#customerName,#customerAddress,#customerSalary").val("");
+    $("#customerId").focus();
+}
+
+$('#btnSearchCustomer').click(function () {
+    let cus_id = $('#txtCusID').val();
+    $("#tblCustomer").empty();
+
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].id == cus_id) {
+            let row = `<tr>
+                        <td>${customerDB[i].id}</td>
+                        <td>${customerDB[i].name}</td>
+                        <td>${customerDB[i].address}</td>
+                        <td>${customerDB[i].salary}</td>
+                        </tr>`;
+
+            $("#tblCustomer").append(row);
+            bindCustomerTrEvents();
+
+        }
+    }
+
+});
+
+function searchCustomer(id) {
+    return customerDB.find(function (customer) {
+        return customer.id == id;
+    });
+}
+
+function updateCustomer(id) {
+    if (searchCustomer(id) == undefined) {
+        alert("No such Customer..please check the ID");
     } else {
-        return false;
-    }
-}
+        let consent = confirm("Do you really want to update this customer.?");
+        if (consent) {
+            let customer = searchCustomer(id);
 
-function searchCustomer(id){
-    for (const customer of customers) {
-        if(customer.id == id){
-            return customer;
+            let customerName = $("#customerName").val();
+            let customerAddress = $("#customerAddress").val();
+            let customerSalary = $("#customerSalary").val();
+
+            customer.name = customerName;
+            customer.address = customerAddress;
+            customer.salary = customerSalary;
+
+            getAllCustomers();
+
+            clearUpdateFormFields();
         }
     }
-    return null;
+
 }
 
-function setCusTextField(id,name,salary,address){
-    $('#update-cusId').val(id);
-    $('#update-cusName').val(name);
-    $('#update-salary').val(salary);
-    $('#update-address').val(address);
-}
 
-/****** Customer regular expressions ******/
-const regExId = /^(C00-)[0-9]{1,3}$/;
-const regCusName = /^[A-z ]{4,20}$/;
-const regExSalary = /^\d{0,9}(\.\d{1,4})?$/;
-const regExAddress = /^[0-9/A-z. ,]{5,}$/
 
-let customerValidations = [];
-customerValidations.push({reg:regExId, field: $('#cusId'),error:'Item Code Pattern Is Wrong : C00-001'});
-customerValidations.push({reg:regCusName, field: $('#cusName'),error:'Name Pattern Is Wrong : A-z'});
-customerValidations.push({reg:regExSalary, field: $('#salary'),error:'Salary Pattern Is Wrong : 2000 or 2000.00'});
-customerValidations.push({reg:regExAddress, field: $('#address'),error:'Address Pattern Is Wrong.'});
-
-$('#cusId,#cusName,#salary,#address').on('keydown',function (event) {
-   if (event.key == "Tab"){
-       event.preventDefault();
-   }
-});
-
-$('#cusId,#cusName,#salary,#address').on('keyup',function () {
-    customerValidity();
-});
-
-$('#cusId,#cusName,#salary,#address').on('blur',function () {
-    customerValidity();
-});
-
-$('#cusId').on('keydown', function (event) {
-   if(event.key == "Enter" && checkCustomer(regExId,$('#cusId'))) {
-       $('#cusName').focus();
-   }  else {
-       $('#cusId').focus();
-   }
-});
-
-$('#cusName').on('keydown', function (event) {
-    if (event.key == "Enter" && checkCustomer(regCusName, $('#cusName'))) {
-        $('#salary').focus();
-    }
-});
-
-$('#salary').on('keydown', function (event) {
-    if (event.key == "Enter" && checkCustomer(regExSalary, $('#salary'))) {
-        $('#address').focus();
-    }
-});
-
-$('#address').on('keydown', function (event) {
-    if (event.key == "Enter" && checkCustomer(regExAddress, $('#address'))) {
-        let res = confirm("Do you want to add this customer.?");
-        if(res) {
-            clearCusTexts();
-        }
-    }
-});
-
-function customerValidity(){
-    let errCount = 0;
-    for (let validation of customerValidations) {
-        if(checkCustomer(validation.reg,validation.field)) {
-            inputCusSuccess(validation.field,"");
-        } else {
-            errCount += 1;
-            inputCusError(validation.field,validation.error);
-        }
-    }
-    setCusBtnState(errCount);
-}
-
-function checkCustomer(regex,textField){
-    let inputValue = textField.val();
-    return regex.test(inputValue) ? true : false;
-}
-
-function inputCusSuccess(textField,error) {
-    if(textField.val().length <= 0){
-        defaultCusText(textField,"");
-    } else {
-        textField.css('border','2px solid green');
-        textField.parent().children('span').text(error);
-    }
-}
-
-function inputCusError(textField,error) {
-    if (textField.val().length <= 0) {
-        defaultCusText(textField,"");
-    } else {
-        textField.css('border','2px solid red');
-        textField.parent().children('span').text(error);
-    }
-}
-
-function defaultCusText(textField,error){
-    textField.css("border","1px solid #ced4da");
-    textField.parent().children('span').text(error);
-}
-
-function setCusBtnState(val){
-    if (val > 0) {
-        $("#saveCustomer").attr('disabled', true);
-    } else {
-        $("#saveCustomer").attr('disabled', false);
-    }
-}
-
-function clearCusTexts(){
-    $('#cusId').focus();
-    $('#cusId,#cusName,#salary,#address').val("");
-    customerValidity();
-}
-
-/****** Customer Update ******/
-let customerValidationsForUpdate = [];
-customerValidationsForUpdate.push({reg:regExId, field: $('#update-cusId'),error:'Item Code Pattern Is Wrong : C00-001'});
-customerValidationsForUpdate.push({reg:regCusName, field: $('#update-cusName'),error:'Name Pattern Is Wrong : A-z'});
-customerValidationsForUpdate.push({reg:regExSalary, field: $('#update-salary'),error:'Salary Pattern Is Wrong : 2000 or 2000.00'});
-customerValidationsForUpdate.push({reg:regExAddress, field: $('#update-address'),error:'Address Pattern Is Wrong.'});
-
-$('#update-cusId,#update-cusName,#update-salary,#update-address').on('keyup',function () {
-    ValidityForCusUpdate();
-});
-
-$('#cusId,#cusName,#salary,#address').on('blur',function () {
-    ValidityForCusUpdate();
-});
-
-$('#update-cusId').on('keydown', function (event) {
-    if(event.key == "Enter" && checkCustomer(regExId,$('#update-cusId'))) {
-        $('#update-cusName').focus();
-    }  else {
-        $('#update-cusId').focus();
-    }
-});
-
-$('#update-cusName').on('keydown', function (event) {
-    if (event.key == "Enter" && checkCustomer(regCusName, $('#update-cusName'))) {
-        $('#update-salary').focus();
-    }
-});
-
-$('#update-salary').on('keydown', function (event) {
-    if (event.key == "Enter" && checkCustomer(regExSalary, $('#update-salary'))) {
-        $('#update-address').focus();
-    }
-});
-
-$('#update-address').on('keydown', function (event) {
-    if (event.key == "Enter" && checkCustomer(regExAddress, $('#update-address'))) {
-        let res = confirm("Do you want to add this customer.?");
-        if(res) {
-           clearCusUpdates();
-        }
-    }
-});
-
-function ValidityForCusUpdate() {
-    let errCount = 0;
-    for (let validation of customerValidationsForUpdate) {
-        if(checkCustomer(validation.reg,validation.field)) {
-            inputCusSuccess(validation.field,"");
-        } else {
-            errCount += 1;
-            inputCusError(validation.field,validation.error);
-        }
-    }
-}
-
-function clearCusUpdates(){
-    $('#update-cusId').focus();
-    $('#update-cusId,#update-cusName,#update-salary,#update-address').val("");
-    ValidityForCusUpdate();
-}
