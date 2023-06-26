@@ -1,8 +1,6 @@
-function item(itemCode,itemName,qty,itemPrice){
-    return {
-        code: itemCode,
-        name: itemName,
-        quantity: qty,
-        price: itemPrice
-    }
+let item={
+    code:"",
+    description:"",
+    unitPrice:0,
+    qtyOnHand:0
 }
