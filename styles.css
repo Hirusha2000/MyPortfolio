@@ -38,8 +38,10 @@
     left: 0;
     bottom: 0;
     right: 0;
-   /* background: #1d1c1c;*/
+  /*  background: #1d1c1c;*/
     background: url("assets/img/background.jpg");
+
+
 }
 
 #loader > div {
@@ -54,6 +56,7 @@
     background: url("assets/img/loader.gif");
     background-size: cover;
     background-position: center;
+    background-color: black;
 }
 
 
