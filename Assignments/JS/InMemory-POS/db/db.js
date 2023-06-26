@@ -1,5 +1,5 @@
-var customers = [];
-var items = [];
-var orders = [];
-var cart = [];
-var orderDetails=[];
+var customerDB = [];
+var itemDB = [];
+var orderDB = [];
+var orderDetailsDB = [];
+var cartDB = [];
