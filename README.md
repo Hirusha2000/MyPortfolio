@@ -1,17 +1,22 @@
 # MyPortfolio
 This is for  demonstrating my skills.
 
-<h1>  Technology and Frameworks </h1>
+<h2>  Technology and Frameworks </h2>
   
-  Technology and Frameworks 
 
-HTML
-CSS
-JS
-Boostrap
-Jquery 
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+<li>Boostrap</li>
+<li>Jquery </li>
 
-References
+
+
+
+
+
+<h2> References </h2>
+
 
 <a href="https://drive.google.com/file/d/1eYn-GKqT4YiE5C5ZisnWTaeY3V2HXubp/view?usp=sharing" target="_blank"> Site Map</a>
 
