@@ -1,7 +1,9 @@
 # MyPortfolio
 This is for  demonstrating my skills.
 
-Technology and Frameworks 
+<h1>  Technology and Frameworks </h1>
+  
+  Technology and Frameworks 
 
 HTML
 CSS
